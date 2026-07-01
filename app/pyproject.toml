@@ -1,7 +1,9 @@
 [project]
 name = "app"
 version = "0.1.0"
-description = "Add your description here"
+description = "creating a cli absed agent for mac books"
 readme = "README.md"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "typer>=0.26.8",
+]
