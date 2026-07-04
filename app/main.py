@@ -12,7 +12,6 @@ def check_weather(city: str = typer.Option(...)):
     )
     if req.status_code == 200:
         data = req.json()
-        print(data["weather"][0]["main"])
 
 
 app()
