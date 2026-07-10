@@ -1,4 +1,9 @@
 import subprocess
 
-res = subprocess.run(["python3", "--version"], capture_output=True, text=True)
-print(res.stdout, res.returncode)
+print("a")  # 1
+
+res = subprocess.Popen(["python3", "--version"], text=True)
+
+res.stdout  # 3
+
+print("b")  # 2
