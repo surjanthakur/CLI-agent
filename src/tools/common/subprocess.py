@@ -2,10 +2,10 @@ from subprocess import SubprocessError
 import subprocess
 
 
-# subprocess run func
+# run osascript in subprocess
 def run_process(script: str):
     """
-    this function run's the subprocess for the apple-script
+    this function run's the subprocess for osascript
     """
     try:
         process = subprocess.Popen(
