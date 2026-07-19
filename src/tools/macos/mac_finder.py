@@ -11,7 +11,7 @@ def open_app(app_name: str):
 # close mac app
 def close_app(app_name: str):
     """this function close the mac apps"""
-    script = f'tell application "{app_name.title()}" to activate'
+    script = f'tell application "{app_name.title()}" to quit'
     subprocess.run_process(script)
 
 
