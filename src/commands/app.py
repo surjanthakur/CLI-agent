@@ -1,5 +1,5 @@
-from .mac_commands import open_command, close_command, hide_command, unhide_command
-from .agent_chat import chat_command
+from .mac_apps import open_command, close_command, hide_command, unhide_command
+from .chat import chat_command
 
 import typer
 
