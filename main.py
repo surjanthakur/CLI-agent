@@ -1,2 +1,9 @@
+from src.cli.app import app as my_cli_app
+
+
 def main():
-    pass
+    my_cli_app()
+
+
+if __name__ == "__main__":
+    main()
