@@ -1,5 +1,5 @@
 from typing import Annotated
-from tools.macos import mac_finder
+from ...tools.macos import mac_finder
 
 import typer
 

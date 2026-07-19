@@ -1,4 +1,4 @@
-from common import subprocess
+from ..common import subprocess
 
 
 # open mac app

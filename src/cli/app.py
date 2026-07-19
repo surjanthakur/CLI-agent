@@ -1,4 +1,4 @@
-from commands.mac_apps import open_command, close_command, hide_command, unhide_command
+from .commands.mac_apps import open_command, close_command, hide_command, unhide_command
 import typer
 
 app = typer.Typer()
