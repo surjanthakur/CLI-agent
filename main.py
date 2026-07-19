@@ -1,4 +1,4 @@
-from src.cli.app import app as my_cli_app
+from src.commands.app import app as my_cli_app
 
 
 def main():
