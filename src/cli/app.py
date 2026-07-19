@@ -1,3 +1,4 @@
+from commands import mac_apps
 import typer
 
 app = typer.Typer()
