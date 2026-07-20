@@ -1,4 +1,5 @@
 import subprocess
+from rich import print
 
 
 # run osascript in subprocess
@@ -15,7 +16,8 @@ def run_process(script: str):
         )
         stdout, stderr = process.communicate()
         if process.returncode != 0:
-            raise RuntimeError(stderr.strip())
+            print(repr(stdout))
+            raise RuntimeError(repr(stderr))
 
     except RuntimeError as err:
         print(f"error while running subprocess script: {err}")
