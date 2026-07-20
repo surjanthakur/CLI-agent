@@ -6,7 +6,7 @@ app = typer.Typer()
 
 
 # change sound
-@app.command("volume", help="Change system sound volume")
+@app.command("sound", help="Change system sound volume")
 def change_sound(value: int = typer.Argument(..., help="Volume level (0-100)")):
     mac_settings.adjust_sound(value)
 
