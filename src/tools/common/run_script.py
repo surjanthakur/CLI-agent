@@ -1,4 +1,3 @@
-from subprocess import SubprocessError
 import subprocess
 
 
@@ -18,5 +17,5 @@ def run_process(script: str):
         if process.returncode != 0:
             raise RuntimeError(stderr.strip())
 
-    except SubprocessError as err:
+    except RuntimeError as err:
         print(f"error while running subprocess script: {err}")

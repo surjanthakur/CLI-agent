@@ -1,5 +1,4 @@
 import subprocess
-from subprocess import SubprocessError
 from rich.console import Console
 
 console = Console()
@@ -19,6 +18,7 @@ def install_brightness():
 
             if process.returncode != 0:
                 raise RuntimeError(stderr)
+            print(f"stdout {stdout}")
 
-    except SubprocessError as err:
+    except RuntimeError as err:
         print(f"error while running subprocess script: {err}")

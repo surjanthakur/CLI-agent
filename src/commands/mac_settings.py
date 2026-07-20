@@ -1,4 +1,4 @@
-from tools.macos import mac_settings
+from ..tools.macos import mac_settings
 
 import typer
 
@@ -18,8 +18,3 @@ def mute_sound():
 @app.command("unmute", help="Unmute system sound")
 def unmute_sound():
     mac_settings.unmute()
-
-
-@app.command("brightness", help="set system brightness")
-def set_brightness(value: int = typer.Argument(..., help="brightness level (0-100)")):
-    mac_settings.set_brightness(value)

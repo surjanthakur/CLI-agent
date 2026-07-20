@@ -1,6 +1,3 @@
-from rich import print
-from ..services.installer import install_brightness
-
 import shutil
 import typer
 
@@ -13,21 +10,3 @@ def ensure_homebrew():
         return
 
     raise RuntimeError("Homebrew is required. Please install Homebrew first.")
-
-
-def ensure_brightness():
-    """
-    function ensure the brightness package is install in your mac terminal.
-    if not installed called install_brightness()
-    """
-    if shutil.which("brightness"):
-        return
-
-    print("Brightness support requires the 'brightness' utility.")
-
-    answer = typer.confirm("Are you sure you want to install it?")
-
-    if not answer:
-        print("stoped downloading brightness...")
-        raise typer.Abort()
-    install_brightness()
