@@ -34,3 +34,14 @@ def recent_clear_menu():
     end tell
     """
     run_script.run_process(script)
+
+
+# put mac on sleep
+def sleep_mode():
+    """this function turns on mac sleep mode"""
+    script = """
+    tell application "System Events" 
+     sleep 
+    end tell
+    """
+    run_script.run_process(script)

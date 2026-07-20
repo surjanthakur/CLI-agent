@@ -28,3 +28,8 @@ def unmute_sound():
 def clear_menu(target: str = typer.Argument(..., help="pass target: menu")):
     if target:
         mac_settings.recent_clear_menu()
+
+
+@app.command("sleep")
+def sleep_mode():
+    mac_settings.sleep_mode()

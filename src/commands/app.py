@@ -1,5 +1,12 @@
 from .mac_apps import open_command, close_command, hide_command, unhide_command
-from .mac_settings import change_sound, mute_sound, unmute_sound, clear_menu
+from .mac_settings import (
+    change_sound,
+    mute_sound,
+    unmute_sound,
+    clear_menu,
+    sleep_mode,
+)
+
 import typer
 
 app = typer.Typer()
@@ -16,3 +23,4 @@ app.command(name="volume")(change_sound)
 app.command(name="mute")(mute_sound)
 app.command(name="unmute")(unmute_sound)
 app.command(name="clear")(clear_menu)
+app.command(name="sleep")(sleep_mode)
