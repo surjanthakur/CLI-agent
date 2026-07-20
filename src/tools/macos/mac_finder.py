@@ -18,7 +18,11 @@ def close_app(app_name: str):
 # hide mac app
 def hide_app(app_name: str):
     """this function hide the mac apps"""
-    script = f"tell application {app_name.title()} hide end tell"
+    script = f"""
+        tell application "System Events"
+            set visible of process "{app_name.title()}" to false
+        end tell
+    """
     run_script.run_process(script)
 
 
