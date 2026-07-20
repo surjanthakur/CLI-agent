@@ -45,3 +45,14 @@ def sleep_mode():
     end tell
     """
     run_script.run_process(script)
+
+
+# lock mac screen
+def lock_screen():
+    """this function lock the mac"""
+    script = """
+    tell application "System Events"
+    keystroke "q" using {control down, command down}
+    end tell
+    """
+    run_script.run_process(script)

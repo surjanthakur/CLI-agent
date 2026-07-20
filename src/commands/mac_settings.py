@@ -30,6 +30,13 @@ def clear_menu(target: str = typer.Argument(..., help="pass target: menu")):
         mac_settings.recent_clear_menu()
 
 
+# put mac on sleep mode
 @app.command("sleep", help="Put the system to sleep")
 def sleep_mode():
     mac_settings.sleep_mode()
+
+
+# lock the screen
+@app.command("lock", help="lock the system")
+def lock_mode():
+    mac_settings.lock_screen()
