@@ -1,5 +1,4 @@
 import typer
-from typing import List
 from ..tools.macos import browser
 
 app = typer.Typer()
