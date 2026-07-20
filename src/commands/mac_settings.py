@@ -1,5 +1,4 @@
 from ..tools.macos import mac_settings
-from rich import print
 
 import typer
 
@@ -26,6 +25,6 @@ def unmute_sound():
 
 # clear system menu
 @app.command("clear")
-def clear_menu(target: str = typer.Argument(..., help="pass target menu")):
+def clear_menu(target: str = typer.Argument(..., help="pass target: menu")):
     if target:
         mac_settings.recent_clear_menu()
