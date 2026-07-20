@@ -8,6 +8,7 @@ app = typer.Typer()
 
 
 def ensure_homebrew():
+    """function ensure the homebrew is install in your mac terminal"""
     if shutil.which("brew"):
         return
 
@@ -15,7 +16,10 @@ def ensure_homebrew():
 
 
 def ensure_brightness():
-
+    """
+    function ensure the brightness package is install in your mac terminal.
+    if not installed called install_brightness()
+    """
     if shutil.which("brightness"):
         return
 

@@ -3,6 +3,7 @@ from subprocess import SubprocessError
 
 
 def install_brightness():
+    """function install the brightness package in cli to automate mac brightness settings."""
     try:
         process = subprocess.Popen(
             ["brew", "install", "brightness"],
