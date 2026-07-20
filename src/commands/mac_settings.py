@@ -24,12 +24,12 @@ def unmute_sound():
 
 
 # clear system menu
-@app.command("clear")
+@app.command("clear", help="Clear the recent system menu entries")
 def clear_menu(target: str = typer.Argument(..., help="pass target: menu")):
     if target:
         mac_settings.recent_clear_menu()
 
 
-@app.command("sleep")
+@app.command("sleep", help="Put the system to sleep")
 def sleep_mode():
     mac_settings.sleep_mode()
