@@ -16,8 +16,6 @@ def run_process(script: str):
         )
         stdout, stderr = process.communicate()
         if process.returncode != 0:
-            print(repr(stdout))
-            raise RuntimeError(repr(stderr))
-
-    except RuntimeError as err:
-        print(f"error while running subprocess script: {err}")
+            print(f"[bold red]✗ Process Error:[/bold red] {repr(stderr)}")
+    except subprocess.CalledProcessError as err:
+        print(f"[bold red]✗ Error:[/bold red] {err}")
