@@ -1,5 +1,4 @@
 from ..common import run_script
-import typer
 
 
 def search_browser(query: str):
@@ -21,11 +20,4 @@ def search_browser(query: str):
             end tell
         end tell
       """
-    try:
-        run_script.run_process(script)
-
-    except RuntimeError as err:
-        typer.secho(
-            "oops! can't open browser, try again ❌",
-            fg=typer.colors.RED,
-        )
+    run_script.run_process(script)
