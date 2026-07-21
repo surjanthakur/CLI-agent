@@ -1,48 +1,24 @@
-2026-07-21 13:46:04 | INFO | main.py:7 | Application starting
-2026-07-21 13:46:04 | INFO | main.py:9 | Initializing startup services
-2026-07-21 13:46:04 | INFO | main.py:11 | Startup services initialized
-2026-07-21 13:46:04 | INFO | main.py:13 | Starting CLI app
-2026-07-21 13:46:04 | ERROR | mac_apps.py:23 | Mac settings command failed: Failed to execute AppleScript.
-2026-07-21 13:46:04 | INFO | main.py:22 | Application stopped
-2026-07-21 13:48:12 | INFO | main.py:7 | Application starting
-2026-07-21 13:48:12 | INFO | main.py:9 | Initializing startup services
-2026-07-21 13:48:12 | INFO | main.py:11 | Startup services initialized
-2026-07-21 13:48:12 | INFO | main.py:13 | Starting CLI app
-2026-07-21 13:48:12 | ERROR | mac_apps.py:23 | Failed to execute AppleScript. stderr:30:38: execution error: Can’t get application "Spotify". (-1728)
+2026-07-21 14:02:23 | INFO | main.py:7 | Application starting
+2026-07-21 14:02:23 | INFO | main.py:9 | Initializing startup services
+2026-07-21 14:02:23 | INFO | main.py:11 | Startup services initialized
+2026-07-21 14:02:23 | INFO | main.py:13 | Starting CLI app
+2026-07-21 14:02:23 | ERROR | mac_apps.py:22 | Failed to execute AppleScript. stderr:30:38: execution error: Can’t get application "Spotify". (-1728)
  stdout: return_code:1
-2026-07-21 13:48:12 | INFO | main.py:22 | Application stopped
-2026-07-21 13:54:12 | INFO | main.py:7 | Application starting
-2026-07-21 13:54:12 | INFO | main.py:9 | Initializing startup services
-2026-07-21 13:54:12 | INFO | main.py:11 | Startup services initialized
-2026-07-21 13:54:12 | INFO | main.py:13 | Starting CLI app
-2026-07-21 13:54:12 | ERROR | mac_apps.py:23 | Failed to execute AppleScript. stderr:30:38: execution error: Can’t get application "Spotify". (-1728)
+2026-07-21 14:02:23 | INFO | main.py:22 | Application stopped
+2026-07-21 14:02:44 | INFO | main.py:7 | Application starting
+2026-07-21 14:02:44 | INFO | main.py:9 | Initializing startup services
+2026-07-21 14:02:44 | INFO | main.py:11 | Startup services initialized
+2026-07-21 14:02:44 | INFO | main.py:13 | Starting CLI app
+2026-07-21 14:02:47 | ERROR | mac_apps.py:22 | Failed to execute AppleScript. stderr:40:96: execution error: System Events got an error: Can’t set process "Spotify" to false. (-10006)
  stdout: return_code:1
-2026-07-21 13:54:12 | INFO | main.py:22 | Application stopped
-2026-07-21 13:54:28 | INFO | main.py:7 | Application starting
-2026-07-21 13:54:28 | INFO | main.py:9 | Initializing startup services
-2026-07-21 13:54:28 | INFO | main.py:11 | Startup services initialized
-2026-07-21 13:54:28 | INFO | main.py:13 | Starting CLI app
-2026-07-21 13:54:28 | ERROR | mac_apps.py:23 | Failed to execute AppleScript. stderr:30:38: execution error: Can’t get application "Spotify". (-1728)
- stdout: return_code:1
-2026-07-21 13:54:28 | INFO | main.py:22 | Application stopped
-2026-07-21 13:55:03 | INFO | main.py:7 | Application starting
-2026-07-21 13:55:03 | INFO | main.py:9 | Initializing startup services
-2026-07-21 13:55:03 | INFO | main.py:11 | Startup services initialized
-2026-07-21 13:55:03 | INFO | main.py:13 | Starting CLI app
-2026-07-21 13:55:03 | ERROR | mac_apps.py:23 | Failed to execute AppleScript. stderr:30:38: execution error: Can’t get application "Spotify". (-1728)
- stdout: return_code:1
-2026-07-21 13:55:03 | INFO | main.py:22 | Application stopped
-2026-07-21 13:55:20 | INFO | main.py:7 | Application starting
-2026-07-21 13:55:20 | INFO | main.py:9 | Initializing startup services
-2026-07-21 13:55:20 | INFO | main.py:11 | Startup services initialized
-2026-07-21 13:55:20 | INFO | main.py:13 | Starting CLI app
-2026-07-21 13:55:20 | ERROR | mac_apps.py:23 | Failed to execute AppleScript. stderr:30:38: execution error: Can’t get application "Spotify". (-1728)
- stdout: return_code:1
-2026-07-21 13:55:20 | INFO | main.py:22 | Application stopped
-2026-07-21 13:56:46 | INFO | main.py:7 | Application starting
-2026-07-21 13:56:46 | INFO | main.py:9 | Initializing startup services
-2026-07-21 13:56:46 | INFO | main.py:11 | Startup services initialized
-2026-07-21 13:56:46 | INFO | main.py:13 | Starting CLI app
-2026-07-21 13:56:46 | ERROR | mac_apps.py:23 | Failed to execute AppleScript. stderr:30:38: execution error: Can’t get application "Spotify". (-1728)
- stdout: return_code:1
-2026-07-21 13:56:46 | INFO | main.py:22 | Application stopped
+2026-07-21 14:02:47 | INFO | main.py:22 | Application stopped
+2026-07-21 14:03:09 | INFO | main.py:7 | Application starting
+2026-07-21 14:03:09 | INFO | main.py:9 | Initializing startup services
+2026-07-21 14:03:09 | INFO | main.py:11 | Startup services initialized
+2026-07-21 14:03:09 | INFO | main.py:13 | Starting CLI app
+2026-07-21 14:03:09 | INFO | main.py:22 | Application stopped
+2026-07-21 14:03:47 | INFO | main.py:7 | Application starting
+2026-07-21 14:03:47 | INFO | main.py:9 | Initializing startup services
+2026-07-21 14:03:47 | INFO | main.py:11 | Startup services initialized
+2026-07-21 14:03:47 | INFO | main.py:13 | Starting CLI app
+2026-07-21 14:03:47 | INFO | main.py:22 | Application stopped
