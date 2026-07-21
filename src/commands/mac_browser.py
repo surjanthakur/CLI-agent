@@ -1,6 +1,7 @@
 import typer
 from ..tools.macos import browser
 from ..utils.exceptions import handle_exceptions
+from rich import print
 
 app = typer.Typer()
 
@@ -16,4 +17,5 @@ def search_command(
         raise typer.Exit()
 
     query_formatted = query.title()
+    print(f"[green]search for: {query} on Safari [/green]")
     handle_exceptions(browser.search_browser, query_formatted)
