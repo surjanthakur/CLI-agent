@@ -3,7 +3,6 @@ from typing import Any, Callable
 from ..tools.macos import mac_settings
 from ..core.logging import logger
 from ..utils.exceptions import SubprocessRunningError
-from rich import print
 
 import typer
 
@@ -20,14 +19,9 @@ def handle_exceptions(func: Callable[..., Any], *args: Any, **kwargs: Any) -> An
         return func(*args, **kwargs)
     except SubprocessRunningError as err:
         logger.error(
-            f"Mac settings command failed: {err}",
-            extra={
-                "returncode": err.returncode,
-                "stdout": err.stdout,
-                "stderr": err.stderr,
-            },
+            f"{err} stderr:{err.stderr} stdout:{err.stdout} return_code:{err.returncode}",
         )
-        print("[bold red]Something went wrong, please try again![/bold red]")
+        typer.echo(message=f"{err.stderr}", err=True)
         raise typer.Abort()
 
 

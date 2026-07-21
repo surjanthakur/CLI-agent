@@ -2,7 +2,6 @@ import typer
 from ..tools.macos import browser
 from ..core.logging import logger
 from ..utils.exceptions import SubprocessRunningError
-from rich import print
 
 app = typer.Typer()
 
@@ -23,12 +22,7 @@ def search_command(
 
     except SubprocessRunningError as err:
         logger.error(
-            f"subprocess error:{err.message}",
-            extra={
-                "returncode": err.returncode,
-                "stdout": err.stdout,
-                "stderr": err.stderr,
-            },
+            f"{err} stderr:{err.stderr} stdout:{err.stdout} return_code:{err.returncode}",
         )
-        print("[bold blue]something went wrong to search query[/bold blue]try again!")
+        typer.echo(message=f"{err.stderr}", err=True)
         typer.Exit()

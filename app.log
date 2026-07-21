@@ -1,67 +1,48 @@
-2026-07-21 12:32:49 | INFO | main.py:7 | Application starting
-2026-07-21 12:32:49 | INFO | main.py:9 | Initializing startup services
-2026-07-21 12:32:49 | INFO | main.py:11 | Startup services initialized
-2026-07-21 12:32:49 | INFO | main.py:13 | Starting CLI app
-2026-07-21 12:32:49 | ERROR | main.py:19 | Application failed
-Traceback (most recent call last):
-  File "/Users/surjanthakur/Documents/Documents/CLI-agent/main.py", line 14, in main
-    my_cli_app()
-  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/main.py", line 1154, in __call__
-    raise e
-  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/main.py", line 1137, in __call__
-    return get_command(self)(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/_click/core.py", line 807, in __call__
-    return self.main(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/core.py", line 1193, in main
-    return _main(
-           ^^^^^^
-  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/core.py", line 183, in _main
-    rv = self.invoke(ctx)
-         ^^^^^^^^^^^^^^^^
-  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/core.py", line 1115, in invoke
-    return _process_result(sub_ctx.command.invoke(sub_ctx))
-                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/_click/core.py", line 746, in invoke
-    return ctx.invoke(self.callback, **ctx.params)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/_click/core.py", line 489, in invoke
-    return callback(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/main.py", line 1515, in wrapper
-    return callback(**use_params)
-           ^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/surjanthakur/Documents/Documents/CLI-agent/src/commands/mac_apps.py", line 15, in open_command
-    apps.open_app(app_name=extract_name)
-  File "/Users/surjanthakur/Documents/Documents/CLI-agent/src/tools/macos/apps.py", line 8, in open_app
-    run_script.run_process(script)
-  File "/Users/surjanthakur/Documents/Documents/CLI-agent/src/tools/common/run_script.py", line 15, in run_process
-    raise SubprocessRunningError(
-          ^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: SubprocessRunningError() takes no keyword arguments
-2026-07-21 12:32:49 | INFO | main.py:22 | Application stopped
-2026-07-21 12:35:38 | INFO | main.py:7 | Application starting
-2026-07-21 12:35:38 | INFO | main.py:9 | Initializing startup services
-2026-07-21 12:35:38 | INFO | main.py:11 | Startup services initialized
-2026-07-21 12:35:38 | INFO | main.py:13 | Starting CLI app
-2026-07-21 12:35:38 | ERROR | mac_apps.py:18 | subprocess error:Failed to execute AppleScript.
-2026-07-21 12:35:38 | INFO | main.py:22 | Application stopped
-2026-07-21 12:36:54 | INFO | main.py:7 | Application starting
-2026-07-21 12:36:54 | INFO | main.py:9 | Initializing startup services
-2026-07-21 12:36:54 | INFO | main.py:11 | Startup services initialized
-2026-07-21 12:36:54 | INFO | main.py:13 | Starting CLI app
-2026-07-21 12:36:54 | ERROR | mac_apps.py:18 | subprocess error:Failed to execute AppleScript.
-2026-07-21 12:36:54 | INFO | main.py:22 | Application stopped
-2026-07-21 12:41:26 | INFO | main.py:7 | Application starting
-2026-07-21 12:41:26 | INFO | main.py:9 | Initializing startup services
-2026-07-21 12:41:26 | INFO | main.py:11 | Startup services initialized
-2026-07-21 12:41:26 | INFO | main.py:13 | Starting CLI app
-2026-07-21 12:41:26 | ERROR | mac_apps.py:18 | subprocess error:Failed to execute AppleScript.
-2026-07-21 12:41:26 | INFO | main.py:22 | Application stopped
-2026-07-21 12:41:40 | INFO | main.py:7 | Application starting
-2026-07-21 12:41:40 | INFO | main.py:9 | Initializing startup services
-2026-07-21 12:41:40 | INFO | main.py:11 | Startup services initialized
-2026-07-21 12:41:40 | INFO | main.py:13 | Starting CLI app
-2026-07-21 12:41:40 | ERROR | mac_apps.py:18 | subprocess error:Failed to execute AppleScript.
-2026-07-21 12:41:40 | INFO | main.py:22 | Application stopped
+2026-07-21 13:46:04 | INFO | main.py:7 | Application starting
+2026-07-21 13:46:04 | INFO | main.py:9 | Initializing startup services
+2026-07-21 13:46:04 | INFO | main.py:11 | Startup services initialized
+2026-07-21 13:46:04 | INFO | main.py:13 | Starting CLI app
+2026-07-21 13:46:04 | ERROR | mac_apps.py:23 | Mac settings command failed: Failed to execute AppleScript.
+2026-07-21 13:46:04 | INFO | main.py:22 | Application stopped
+2026-07-21 13:48:12 | INFO | main.py:7 | Application starting
+2026-07-21 13:48:12 | INFO | main.py:9 | Initializing startup services
+2026-07-21 13:48:12 | INFO | main.py:11 | Startup services initialized
+2026-07-21 13:48:12 | INFO | main.py:13 | Starting CLI app
+2026-07-21 13:48:12 | ERROR | mac_apps.py:23 | Failed to execute AppleScript. stderr:30:38: execution error: Can’t get application "Spotify". (-1728)
+ stdout: return_code:1
+2026-07-21 13:48:12 | INFO | main.py:22 | Application stopped
+2026-07-21 13:54:12 | INFO | main.py:7 | Application starting
+2026-07-21 13:54:12 | INFO | main.py:9 | Initializing startup services
+2026-07-21 13:54:12 | INFO | main.py:11 | Startup services initialized
+2026-07-21 13:54:12 | INFO | main.py:13 | Starting CLI app
+2026-07-21 13:54:12 | ERROR | mac_apps.py:23 | Failed to execute AppleScript. stderr:30:38: execution error: Can’t get application "Spotify". (-1728)
+ stdout: return_code:1
+2026-07-21 13:54:12 | INFO | main.py:22 | Application stopped
+2026-07-21 13:54:28 | INFO | main.py:7 | Application starting
+2026-07-21 13:54:28 | INFO | main.py:9 | Initializing startup services
+2026-07-21 13:54:28 | INFO | main.py:11 | Startup services initialized
+2026-07-21 13:54:28 | INFO | main.py:13 | Starting CLI app
+2026-07-21 13:54:28 | ERROR | mac_apps.py:23 | Failed to execute AppleScript. stderr:30:38: execution error: Can’t get application "Spotify". (-1728)
+ stdout: return_code:1
+2026-07-21 13:54:28 | INFO | main.py:22 | Application stopped
+2026-07-21 13:55:03 | INFO | main.py:7 | Application starting
+2026-07-21 13:55:03 | INFO | main.py:9 | Initializing startup services
+2026-07-21 13:55:03 | INFO | main.py:11 | Startup services initialized
+2026-07-21 13:55:03 | INFO | main.py:13 | Starting CLI app
+2026-07-21 13:55:03 | ERROR | mac_apps.py:23 | Failed to execute AppleScript. stderr:30:38: execution error: Can’t get application "Spotify". (-1728)
+ stdout: return_code:1
+2026-07-21 13:55:03 | INFO | main.py:22 | Application stopped
+2026-07-21 13:55:20 | INFO | main.py:7 | Application starting
+2026-07-21 13:55:20 | INFO | main.py:9 | Initializing startup services
+2026-07-21 13:55:20 | INFO | main.py:11 | Startup services initialized
+2026-07-21 13:55:20 | INFO | main.py:13 | Starting CLI app
+2026-07-21 13:55:20 | ERROR | mac_apps.py:23 | Failed to execute AppleScript. stderr:30:38: execution error: Can’t get application "Spotify". (-1728)
+ stdout: return_code:1
+2026-07-21 13:55:20 | INFO | main.py:22 | Application stopped
+2026-07-21 13:56:46 | INFO | main.py:7 | Application starting
+2026-07-21 13:56:46 | INFO | main.py:9 | Initializing startup services
+2026-07-21 13:56:46 | INFO | main.py:11 | Startup services initialized
+2026-07-21 13:56:46 | INFO | main.py:13 | Starting CLI app
+2026-07-21 13:56:46 | ERROR | mac_apps.py:23 | Failed to execute AppleScript. stderr:30:38: execution error: Can’t get application "Spotify". (-1728)
+ stdout: return_code:1
+2026-07-21 13:56:46 | INFO | main.py:22 | Application stopped

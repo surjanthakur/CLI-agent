@@ -1,93 +1,58 @@
 from typing import Callable, Any
+
 from ..tools.macos import apps
 from ..core.logging import logger
 from ..utils.exceptions import SubprocessRunningError
-from rich import print
 
 import typer
 
 app = typer.Typer()
 
 
-def handle_exceptions():
-    pass
+# exception handler
+def handle_exceptions(func: Callable[..., Any], *args: Any, **kwargs: Any) -> Any:
+    """Run a macOS apps helper function and handle subprocess failure gracefully.
 
-
-@app.command("open", help="Open an application by name")
-def open_command(name: list[str] = typer.Argument(..., help="Name of the app to open")):
+    If the wrapped function raises a SubprocessRunningError, the error is logged with
+    its return code, stdout, and stderr, and a Rich-styled error message is printed.
+    """
     try:
-        extract_name = " ".join(name)
-        apps.open_app(app_name=extract_name)
-
+        return func(*args, **kwargs)
     except SubprocessRunningError as err:
         logger.error(
-            f"subprocess error:{err.message}",
-            extra={
-                "returncode": err.returncode,
-                "stdout": err.stdout,
-                "stderr": err.stderr,
-            },
+            f"{err} stderr:{err.stderr} stdout:{err.stdout} return_code:{err.returncode}",
         )
-        print("[bold red]can't get the app ❌[/bold red]try again!")
-        typer.Exit()
+        typer.echo(message=f"{err.stderr}", err=True)
+        raise typer.Exit()
 
 
+# opne app
+@app.command("open", help="Open an application by name")
+def open_command(name: list[str] = typer.Argument(..., help="Name of the app to open")):
+    extract_name = " ".join(name)
+    handle_exceptions(apps.open_app, extract_name)
+
+
+# close app
 @app.command("close", help="Close an application by name")
 def close_command(
     name: list[str] = typer.Argument(..., help="Name of the app to close")
 ):
-    try:
-        extract_name = " ".join(name)
-        apps.close_app(app_name=extract_name)
-
-    except SubprocessRunningError as err:
-        logger.error(
-            f"subprocess error:{err.message}",
-            extra={
-                "returncode": err.returncode,
-                "stdout": err.stdout,
-                "stderr": err.stderr,
-            },
-        )
-        print("[bold red]can't get the app  ❌[/bold red]try again!")
-        typer.Exit()
+    extract_name = " ".join(name)
+    handle_exceptions(apps.close_app, extract_name)
 
 
+# hide app
 @app.command("hide", help="Hide an application by name")
 def hide_command(name: list[str] = typer.Argument(..., help="Name of the app to hide")):
-    try:
-        extract_name = " ".join(name)
-        apps.hide_app(app_name=extract_name)
-
-    except SubprocessRunningError as err:
-        logger.error(
-            f"subprocess error:{err.message}",
-            extra={
-                "returncode": err.returncode,
-                "stdout": err.stdout,
-                "stderr": err.stderr,
-            },
-        )
-        print("[bold red]can't get the app  ❌[/bold red]try again!")
-        typer.Exit()
+    extract_name = " ".join(name)
+    handle_exceptions(apps.hide_app, extract_name)
 
 
+# unhide app
 @app.command("unhide", help="Unhide an application by name")
 def unhide_command(
     name: list[str] = typer.Argument(..., help="Name of the app to unhide")
 ):
-    try:
-        extract_name = " ".join(name)
-        apps.unhide_app(app_name=extract_name)
-
-    except SubprocessRunningError as err:
-        logger.error(
-            f"subprocess error:{err.message}",
-            extra={
-                "returncode": err.returncode,
-                "stdout": err.stdout,
-                "stderr": err.stderr,
-            },
-        )
-        print("[bold red]can't get the app  ❌[/bold red]try again!")
-        typer.Exit()
+    extract_name = " ".join(name)
+    handle_exceptions(apps.unhide_app, extract_name)
