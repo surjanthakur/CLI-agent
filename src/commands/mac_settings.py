@@ -1,28 +1,9 @@
-from typing import Any, Callable
-
 from ..tools.macos import mac_settings
-from ..core.logging import logger
-from ..utils.exceptions import SubprocessRunningError
+from ..utils.exceptions import handle_exceptions
 
 import typer
 
 app = typer.Typer()
-
-
-def handle_exceptions(func: Callable[..., Any], *args: Any, **kwargs: Any) -> Any:
-    """Run a macOS settings helper function and handle subprocess failure gracefully.
-
-    If the wrapped function raises a SubprocessRunningError, the error is logged with
-    its return code, stdout, and stderr, and a Rich-styled error message is printed.
-    """
-    try:
-        return func(*args, **kwargs)
-    except SubprocessRunningError as err:
-        logger.error(
-            f"{err} stderr:{err.stderr} stdout:{err.stdout} return_code:{err.returncode}",
-        )
-        typer.echo(message=f"{err.stderr}", err=True)
-        raise typer.Abort()
 
 
 # change sound
