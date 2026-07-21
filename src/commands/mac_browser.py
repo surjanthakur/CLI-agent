@@ -1,13 +1,16 @@
 import typer
 from ..tools.macos import browser
 
-app = typer.Typer()
+app = typer.Typer(pretty_exceptions_show_locals=True)
 
 
+# browser search
 @app.command("search")
 def search_command(
     query: str = typer.Option(..., "--q", help="Search query"),
 ):
+    """this command search query in safari browser"""
+
     if not query:
         typer.echo("Error: Provide search terms with --q")
         raise typer.Exit()

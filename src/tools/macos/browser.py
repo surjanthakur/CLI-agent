@@ -1,12 +1,11 @@
 from ..common import run_script
-from typing import List
+import typer
 
 
 def search_browser(query: str):
     """this function Search in specified browser"""
-
     script = f"""
-        tell application "Safari"
+         tell application "Safari"
             activate
             
             if not (exists window 1) then
@@ -21,5 +20,12 @@ def search_browser(query: str):
                 set URL to "https://www.google.com/search?q=" & quoted form of "{query}"
             end tell
         end tell
-    """
-    run_script.run_process(script)
+      """
+    try:
+        run_script.run_process(script)
+
+    except RuntimeError as err:
+        typer.secho(
+            "oops! can't open browser, try again ❌",
+            fg=typer.colors.RED,
+        )
