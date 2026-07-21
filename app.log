@@ -74,3 +74,27 @@
 2026-07-21 15:56:18 | INFO | main.py:11 | Startup services initialized
 2026-07-21 15:56:18 | INFO | main.py:13 | Starting CLI app
 2026-07-21 15:56:18 | INFO | main.py:22 | Application stopped
+2026-07-21 16:32:46 | INFO | main.py:7 | Application starting
+2026-07-21 16:32:46 | INFO | main.py:9 | Initializing startup services
+2026-07-21 16:32:46 | ERROR | installer.py:77 | Unexpected error
+Traceback (most recent call last):
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/src/services/installer.py", line 20, in download_ollama
+    with Progress(
+         ^^^^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/rich/progress.py", line 1109, in __init__
+    self.get_time = get_time or self.console.get_time
+                                ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'Console' has no attribute 'get_time'
+2026-07-21 16:32:46 | INFO | main.py:11 | Startup services initialized
+2026-07-21 16:32:46 | INFO | main.py:13 | Starting CLI app
+2026-07-21 16:32:46 | INFO | main.py:22 | Application stopped
+2026-07-21 16:34:09 | INFO | main.py:7 | Application starting
+2026-07-21 16:34:09 | INFO | main.py:9 | Initializing startup services
+2026-07-21 16:34:39 | INFO | main.py:11 | Startup services initialized
+2026-07-21 16:34:39 | INFO | main.py:13 | Starting CLI app
+2026-07-21 16:34:39 | INFO | main.py:22 | Application stopped
+2026-07-21 16:35:09 | INFO | main.py:7 | Application starting
+2026-07-21 16:35:09 | INFO | main.py:9 | Initializing startup services
+2026-07-21 16:35:09 | INFO | main.py:11 | Startup services initialized
+2026-07-21 16:35:09 | INFO | main.py:13 | Starting CLI app
+2026-07-21 16:35:09 | INFO | main.py:22 | Application stopped
