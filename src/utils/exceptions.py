@@ -1,7 +1,7 @@
 class SubprocessRunningError(Exception):
     """Raised when an osascript subprocess fails."""
 
-    def ___init__(
+    def __init__(
         self,
         message: str,
         *,
@@ -9,6 +9,7 @@ class SubprocessRunningError(Exception):
         stdout: str = "",
         stderr: str = "",
     ):
+        super().__init__(message)
         self.message = message
         self.returncode = returncode
         self.stdout = stdout

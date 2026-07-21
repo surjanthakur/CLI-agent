@@ -16,5 +16,5 @@ def run_process(script: str):
             "Failed to execute AppleScript.",
             returncode=process.returncode,
             stdout=process.stdout,
-            stderr=repr(process.stderr),
+            stderr=process.stderr,
         )

@@ -1,7 +1,7 @@
 import typer
 from ..tools.macos import browser
 
-app = typer.Typer(pretty_exceptions_show_locals=True)
+app = typer.Typer()
 
 
 # browser search
