@@ -1,3 +1,4 @@
+from typing import Callable, Any
 from ..tools.macos import apps
 from ..core.logging import logger
 from ..utils.exceptions import SubprocessRunningError
@@ -6,6 +7,10 @@ from rich import print
 import typer
 
 app = typer.Typer()
+
+
+def handle_exceptions():
+    pass
 
 
 @app.command("open", help="Open an application by name")
