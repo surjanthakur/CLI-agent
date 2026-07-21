@@ -22,3 +22,15 @@
 2026-07-21 14:03:47 | INFO | main.py:11 | Startup services initialized
 2026-07-21 14:03:47 | INFO | main.py:13 | Starting CLI app
 2026-07-21 14:03:47 | INFO | main.py:22 | Application stopped
+2026-07-21 14:13:33 | INFO | main.py:7 | Application starting
+2026-07-21 14:13:33 | INFO | main.py:9 | Initializing startup services
+2026-07-21 14:13:33 | INFO | main.py:11 | Startup services initialized
+2026-07-21 14:13:33 | INFO | main.py:13 | Starting CLI app
+2026-07-21 14:13:33 | ERROR | exceptions.py:34 | Failed to execute AppleScript. stderr:28:36: execution error: Can’t get application "Brave". (-1728)
+ stdout: return_code:1
+2026-07-21 14:13:33 | INFO | main.py:22 | Application stopped
+2026-07-21 14:13:45 | INFO | main.py:7 | Application starting
+2026-07-21 14:13:45 | INFO | main.py:9 | Initializing startup services
+2026-07-21 14:13:45 | INFO | main.py:11 | Startup services initialized
+2026-07-21 14:13:45 | INFO | main.py:13 | Starting CLI app
+2026-07-21 14:13:46 | INFO | main.py:22 | Application stopped
