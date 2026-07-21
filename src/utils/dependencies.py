@@ -7,13 +7,6 @@ import time
 app = typer.Typer()
 
 
-def ensure_homebrew():
-    """this function ensure the homebrew is installed"""
-    if shutil.which("brew"):
-        return
-    raise RuntimeError("Homebrew is required. Please installed Homebrew first.")
-
-
 def ensure_ollama():
     "this function ensure the ollama is installed"
     if shutil.which("ollama"):
@@ -31,7 +24,7 @@ def start_ollama_server():
     time.sleep(3)
 
 
-# check if server running
+# check is server running ?
 def is_ollama_running() -> bool:
     try:
         subprocess.run(
@@ -45,6 +38,7 @@ def is_ollama_running() -> bool:
         return False
 
 
+# check is qwen2.5-coder installed ?
 def ensure_llm_model():
     "this function ensure the model qwen2.5 coder is installed"
     try:
