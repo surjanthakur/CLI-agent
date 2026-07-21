@@ -1,5 +1,6 @@
 import subprocess
 from ...utils.exceptions import SubprocessRunningError
+from ...core.logging import logger
 
 
 # run osascript in subprocess
@@ -11,10 +12,9 @@ def run_process(script: str):
         ["osascript", "-e", script], text=True, capture_output=True
     )
     if process.returncode != 0:
-        message = (repr(process.stderr)) or "Failed to execute AppleScript."
         raise SubprocessRunningError(
-            message,
+            "Failed to execute AppleScript.",
             returncode=process.returncode,
             stdout=process.stdout,
-            stderr=process.stderr,
+            stderr=repr(process.stderr),
         )

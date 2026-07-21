@@ -1,4 +1,7 @@
 from ..tools.macos import apps
+from ..core.logging import logger
+from ..utils.exceptions import SubprocessRunningError
+from rich import print
 
 import typer
 
@@ -7,8 +10,14 @@ app = typer.Typer()
 
 @app.command("open", help="Open an application by name")
 def open_command(name: list[str] = typer.Argument(..., help="Name of the app to open")):
-    extract_name = " ".join(name)
-    apps.open_app(app_name=extract_name)
+    try:
+        extract_name = " ".join(name)
+        apps.open_app(app_name=extract_name)
+    except SubprocessRunningError as err:
+        logger.warning(
+            f"subprocess error:{err.message} stderr:{err.stderr} return_code:{err.returncode}"
+        )
+        print("[bold red]somethings went wrong ❌[/bold red]try again!")
 
 
 @app.command("close", help="Close an application by name")

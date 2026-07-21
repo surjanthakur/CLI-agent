@@ -1,0 +1,10 @@
+2026-07-21 12:03:35 | INFO | main.py:7 | Application starting
+2026-07-21 12:03:35 | INFO | main.py:9 | Initializing startup services
+2026-07-21 12:03:35 | INFO | main.py:11 | Startup services initialized
+2026-07-21 12:03:35 | INFO | main.py:13 | Starting CLI app
+2026-07-21 12:03:35 | INFO | main.py:22 | Application stopped
+2026-07-21 12:03:50 | INFO | main.py:7 | Application starting
+2026-07-21 12:03:50 | INFO | main.py:9 | Initializing startup services
+2026-07-21 12:03:50 | INFO | main.py:11 | Startup services initialized
+2026-07-21 12:03:50 | INFO | main.py:13 | Starting CLI app
+2026-07-21 12:03:50 | INFO | main.py:22 | Application stopped
