@@ -21,7 +21,16 @@ def start_ollama_server():
         stdout=subprocess.DEVNULL,
         stderr=subprocess.DEVNULL,
     )
-    time.sleep(3)
+
+    while True:
+        process = subprocess.run(
+            ["ollama", "list"],
+            capture_output=True,
+            text=True,
+        )
+        if process.returncode == 0:
+            break
+        time.sleep(0.5)
 
 
 # check is server running ?
@@ -34,7 +43,7 @@ def is_ollama_running() -> bool:
             check=True,
         )
         return True
-    except subprocess.CalledProcessError:
+    except (subprocess.CalledProcessError, FileNotFoundError):
         return False
 
 

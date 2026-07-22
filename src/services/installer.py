@@ -72,12 +72,12 @@ def download_ollama():
         rprint(
             "[bold red]Error: 'brew' command not found. Is Homebrew installed?[/bold red]"
         )
-    except subprocess.CalledProcessError as e:
-        logger.error(f"Ollama installation failed: {e}")
+    except subprocess.CalledProcessError as err:
+        logger.error(f"Ollama installation failed: {err}")
         rprint("[red]Installation failed. Check the output above.[/red]")
-    except Exception as e:
+    except Exception as err:
         logger.exception("Unexpected error")
-        rprint(f"[red]Unexpected error: {e}[/red]")
+        rprint(f"[red]Unexpected error: {err}[/red]")
 
 
 def download_llm_model():
@@ -141,9 +141,9 @@ def download_llm_model():
         rprint(
             "[bold red]Error: 'brew' command not found. Is Homebrew installed?[/bold red]"
         )
-    except subprocess.CalledProcessError as e:
-        logger.error(f"qwen2.5-coder installation failed: {e}")
+    except subprocess.CalledProcessError as err:
+        logger.error(f"qwen2.5-coder installation failed: {err}")
         rprint("[red]Installation failed. Check the output above.[/red]")
-    except Exception as e:
+    except Exception as err:
         logger.exception("Unexpected error")
-        rprint(f"[red]Unexpected error: {e}[/red]")
+        rprint(f"[red]Unexpected error: {err}[/red]")
