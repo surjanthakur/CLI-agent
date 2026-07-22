@@ -9,4 +9,5 @@ dependencies = [
     "langchain-ollama>=1.1.0",
     "pydantic>=2.13.4",
     "typer>=0.26.8",
+    "ytmusicapi>=1.12.1",
 ]
