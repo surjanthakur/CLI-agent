@@ -1,6 +1,5 @@
 from .mac_apps import open_command, close_command, hide_command, unhide_command
 from .mac_browser import search_command
-from .chat import chat_command
 from .mac_settings import (
     change_sound,
     mute_sound,
@@ -33,6 +32,3 @@ app.command(name="lock", help="Lock the computer screen")(lock_mode)
 
 # browser commands
 app.command(name="search", help="search query in browser")(search_command)
-
-# agent chat commands
-app.command(name="chat", help="start chat with agent")(chat_command)
