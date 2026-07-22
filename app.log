@@ -135,3 +135,259 @@ ollama._types.ResponseError: "qwen2.5-coder:3b" does not support thinking (statu
 2026-07-22 13:30:13 | INFO | main.py:11 | Startup services initialized
 2026-07-22 13:30:13 | INFO | main.py:13 | Starting CLI app
 2026-07-22 13:30:13 | INFO | main.py:22 | Application stopped
+2026-07-22 13:42:43 | INFO | main.py:7 | Application starting
+2026-07-22 13:42:43 | INFO | main.py:9 | Initializing startup services
+2026-07-22 13:42:43 | INFO | main.py:11 | Startup services initialized
+2026-07-22 13:42:43 | INFO | main.py:13 | Starting CLI app
+2026-07-22 13:43:01 | ERROR | main.py:19 | Application failed
+Traceback (most recent call last):
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/main.py", line 14, in main
+    my_cli_app()
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/_click/core.py", line 807, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/core.py", line 1203, in main
+    return _main(
+           ^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/core.py", line 189, in _main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/core.py", line 1125, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/_click/core.py", line 746, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/_click/core.py", line 489, in invoke
+    return callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/src/commands/chat.py", line 15, in chat_command
+    stream = qwen_llm_response()
+             ^^^^^^^^^^^^^^^^^^^
+TypeError: qwen_llm_response() missing 1 required positional argument: 'query'
+2026-07-22 13:43:01 | INFO | main.py:22 | Application stopped
+2026-07-22 13:43:32 | INFO | main.py:7 | Application starting
+2026-07-22 13:43:32 | INFO | main.py:9 | Initializing startup services
+2026-07-22 13:43:32 | INFO | main.py:11 | Startup services initialized
+2026-07-22 13:43:32 | INFO | main.py:13 | Starting CLI app
+2026-07-22 13:43:35 | ERROR | main.py:19 | Application failed
+Traceback (most recent call last):
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/main.py", line 14, in main
+    my_cli_app()
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/_click/core.py", line 807, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/core.py", line 1203, in main
+    return _main(
+           ^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/core.py", line 189, in _main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/core.py", line 1125, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/_click/core.py", line 746, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/_click/core.py", line 489, in invoke
+    return callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/src/commands/chat.py", line 16, in chat_command
+    for chunk in stream:
+TypeError: 'coroutine' object is not iterable
+2026-07-22 13:43:35 | INFO | main.py:22 | Application stopped
+2026-07-22 13:44:20 | INFO | main.py:7 | Application starting
+2026-07-22 13:44:20 | INFO | main.py:9 | Initializing startup services
+2026-07-22 13:44:20 | INFO | main.py:11 | Startup services initialized
+2026-07-22 13:44:20 | INFO | main.py:13 | Starting CLI app
+2026-07-22 13:44:25 | ERROR | main.py:19 | Application failed
+Traceback (most recent call last):
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/main.py", line 14, in main
+    my_cli_app()
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/_click/core.py", line 807, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/core.py", line 1203, in main
+    return _main(
+           ^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/core.py", line 189, in _main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/core.py", line 1125, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/_click/core.py", line 746, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/_click/core.py", line 489, in invoke
+    return callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/src/commands/chat.py", line 15, in chat_command
+    stream = qwen_llm_response(query)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/src/agent/llm.py", line 19, in qwen_llm_response
+    SystemMessage(content=system_prompt()),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/langchain_core/messages/system.py", line 60, in __init__
+    super().__init__(content=content, **kwargs)
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/langchain_core/messages/base.py", line 179, in __init__
+    super().__init__(content=content, **kwargs)
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/langchain_core/load/serializable.py", line 118, in __init__
+    super().__init__(*args, **kwargs)
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/pydantic/main.py", line 263, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 13 validation errors for SystemMessage
+content.str
+  Input should be a valid string [type=string_type, input_value=SystemMessage(content='yo...}, response_metadata={}), input_type=SystemMessage]
+    For further information visit https://errors.pydantic.dev/2.13/v/string_type
+content.list[union[str,dict[any,any]]].0.str
+  Input should be a valid string [type=string_type, input_value=('content', 'you are a helpfull ai for learning.'), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.13/v/string_type
+content.list[union[str,dict[any,any]]].0.dict[any,any]
+  Input should be a valid dictionary [type=dict_type, input_value=('content', 'you are a helpfull ai for learning.'), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.13/v/dict_type
+content.list[union[str,dict[any,any]]].1.str
+  Input should be a valid string [type=string_type, input_value=('additional_kwargs', {}), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.13/v/string_type
+content.list[union[str,dict[any,any]]].1.dict[any,any]
+  Input should be a valid dictionary [type=dict_type, input_value=('additional_kwargs', {}), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.13/v/dict_type
+content.list[union[str,dict[any,any]]].2.str
+  Input should be a valid string [type=string_type, input_value=('response_metadata', {}), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.13/v/string_type
+content.list[union[str,dict[any,any]]].2.dict[any,any]
+  Input should be a valid dictionary [type=dict_type, input_value=('response_metadata', {}), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.13/v/dict_type
+content.list[union[str,dict[any,any]]].3.str
+  Input should be a valid string [type=string_type, input_value=('type', 'system'), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.13/v/string_type
+content.list[union[str,dict[any,any]]].3.dict[any,any]
+  Input should be a valid dictionary [type=dict_type, input_value=('type', 'system'), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.13/v/dict_type
+content.list[union[str,dict[any,any]]].4.str
+  Input should be a valid string [type=string_type, input_value=('name', None), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.13/v/string_type
+content.list[union[str,dict[any,any]]].4.dict[any,any]
+  Input should be a valid dictionary [type=dict_type, input_value=('name', None), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.13/v/dict_type
+content.list[union[str,dict[any,any]]].5.str
+  Input should be a valid string [type=string_type, input_value=('id', None), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.13/v/string_type
+content.list[union[str,dict[any,any]]].5.dict[any,any]
+  Input should be a valid dictionary [type=dict_type, input_value=('id', None), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.13/v/dict_type
+2026-07-22 13:44:25 | INFO | main.py:22 | Application stopped
+2026-07-22 13:46:57 | INFO | main.py:7 | Application starting
+2026-07-22 13:46:57 | INFO | main.py:9 | Initializing startup services
+2026-07-22 13:46:58 | INFO | main.py:11 | Startup services initialized
+2026-07-22 13:46:58 | INFO | main.py:13 | Starting CLI app
+2026-07-22 13:47:08 | INFO | _client.py:1025 | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-07-22 13:48:33 | INFO | _client.py:1025 | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-07-22 13:48:39 | INFO | main.py:22 | Application stopped
+2026-07-22 13:48:49 | INFO | main.py:7 | Application starting
+2026-07-22 13:48:49 | INFO | main.py:9 | Initializing startup services
+2026-07-22 13:48:49 | INFO | main.py:11 | Startup services initialized
+2026-07-22 13:48:49 | INFO | main.py:13 | Starting CLI app
+2026-07-22 13:48:55 | INFO | _client.py:1025 | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-07-22 13:49:47 | INFO | _client.py:1025 | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-07-22 13:50:17 | INFO | _client.py:1025 | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-07-22 13:50:27 | INFO | main.py:22 | Application stopped
+2026-07-22 13:51:37 | INFO | main.py:7 | Application starting
+2026-07-22 13:51:37 | INFO | main.py:9 | Initializing startup services
+2026-07-22 13:51:37 | INFO | main.py:11 | Startup services initialized
+2026-07-22 13:51:37 | INFO | main.py:13 | Starting CLI app
+2026-07-22 13:51:43 | INFO | _client.py:1025 | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-07-22 13:52:01 | INFO | _client.py:1025 | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-07-22 13:52:15 | INFO | main.py:22 | Application stopped
+2026-07-22 13:52:57 | INFO | main.py:7 | Application starting
+2026-07-22 13:52:57 | INFO | main.py:9 | Initializing startup services
+2026-07-22 13:52:57 | INFO | main.py:11 | Startup services initialized
+2026-07-22 13:52:57 | INFO | main.py:13 | Starting CLI app
+2026-07-22 13:53:00 | INFO | _client.py:1025 | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-07-22 13:53:33 | INFO | main.py:22 | Application stopped
+2026-07-22 13:53:43 | INFO | main.py:7 | Application starting
+2026-07-22 13:53:43 | INFO | main.py:9 | Initializing startup services
+2026-07-22 13:53:43 | INFO | main.py:11 | Startup services initialized
+2026-07-22 13:53:43 | INFO | main.py:13 | Starting CLI app
+2026-07-22 13:53:44 | INFO | _client.py:1025 | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-07-22 13:53:57 | INFO | _client.py:1025 | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-07-22 13:54:22 | INFO | main.py:22 | Application stopped
+2026-07-22 14:06:13 | INFO | main.py:7 | Application starting
+2026-07-22 14:06:13 | INFO | main.py:9 | Initializing startup services
+2026-07-22 14:06:13 | INFO | main.py:11 | Startup services initialized
+2026-07-22 14:06:13 | INFO | main.py:13 | Starting CLI app
+2026-07-22 14:06:58 | INFO | _client.py:1025 | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-07-22 14:07:28 | INFO | main.py:22 | Application stopped
+2026-07-22 14:07:32 | INFO | main.py:7 | Application starting
+2026-07-22 14:07:32 | INFO | main.py:9 | Initializing startup services
+2026-07-22 14:07:32 | INFO | main.py:11 | Startup services initialized
+2026-07-22 14:07:32 | INFO | main.py:13 | Starting CLI app
+2026-07-22 14:07:39 | INFO | _client.py:1025 | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-07-22 14:07:51 | INFO | _client.py:1025 | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-07-22 14:08:55 | INFO | main.py:22 | Application stopped
+2026-07-22 14:09:01 | INFO | main.py:7 | Application starting
+2026-07-22 14:09:01 | INFO | main.py:9 | Initializing startup services
+2026-07-22 14:09:01 | INFO | main.py:11 | Startup services initialized
+2026-07-22 14:09:01 | INFO | main.py:13 | Starting CLI app
+2026-07-22 14:09:05 | INFO | _client.py:1025 | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-07-22 14:09:22 | INFO | _client.py:1025 | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-07-22 14:10:12 | INFO | main.py:22 | Application stopped
+2026-07-22 14:10:16 | INFO | main.py:7 | Application starting
+2026-07-22 14:10:16 | INFO | main.py:9 | Initializing startup services
+2026-07-22 14:10:16 | INFO | main.py:11 | Startup services initialized
+2026-07-22 14:10:16 | INFO | main.py:13 | Starting CLI app
+2026-07-22 14:10:19 | INFO | _client.py:1025 | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-07-22 14:10:27 | INFO | _client.py:1025 | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-07-22 14:10:39 | INFO | main.py:22 | Application stopped
+2026-07-22 14:13:08 | INFO | main.py:7 | Application starting
+2026-07-22 14:13:08 | INFO | main.py:9 | Initializing startup services
+2026-07-22 14:13:08 | INFO | main.py:11 | Startup services initialized
+2026-07-22 14:13:08 | INFO | main.py:13 | Starting CLI app
+2026-07-22 14:13:12 | INFO | _client.py:1025 | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-07-22 14:13:23 | INFO | _client.py:1025 | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-07-22 14:13:40 | INFO | main.py:22 | Application stopped
+2026-07-22 14:13:50 | INFO | main.py:7 | Application starting
+2026-07-22 14:13:50 | INFO | main.py:9 | Initializing startup services
+2026-07-22 14:13:50 | INFO | main.py:11 | Startup services initialized
+2026-07-22 14:13:50 | INFO | main.py:13 | Starting CLI app
+2026-07-22 14:13:51 | INFO | main.py:22 | Application stopped
+2026-07-22 14:14:13 | INFO | main.py:7 | Application starting
+2026-07-22 14:14:13 | INFO | main.py:9 | Initializing startup services
+2026-07-22 14:14:13 | INFO | main.py:11 | Startup services initialized
+2026-07-22 14:14:13 | INFO | main.py:13 | Starting CLI app
+2026-07-22 14:14:13 | INFO | main.py:22 | Application stopped
+2026-07-22 14:14:35 | INFO | main.py:7 | Application starting
+2026-07-22 14:14:35 | INFO | main.py:9 | Initializing startup services
+2026-07-22 14:14:35 | INFO | main.py:11 | Startup services initialized
+2026-07-22 14:14:35 | INFO | main.py:13 | Starting CLI app
+2026-07-22 14:14:38 | INFO | main.py:22 | Application stopped
+2026-07-22 14:14:53 | INFO | main.py:7 | Application starting
+2026-07-22 14:14:53 | INFO | main.py:9 | Initializing startup services
+2026-07-22 14:14:53 | INFO | main.py:11 | Startup services initialized
+2026-07-22 14:14:53 | INFO | main.py:13 | Starting CLI app
+2026-07-22 14:14:53 | INFO | main.py:22 | Application stopped
