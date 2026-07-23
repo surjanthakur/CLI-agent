@@ -1,8 +1,7 @@
-from ..tools.macos import mac_settings
-
-# from ..utils.exceptions import handle_exceptions
-from rich import print
 import typer
+from rich import print
+
+from ..tools.macos import mac_settings
 
 app = typer.Typer()
 

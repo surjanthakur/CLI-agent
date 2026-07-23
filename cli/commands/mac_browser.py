@@ -1,11 +1,11 @@
-from ..core.logging import logger
-from ..tools.macos import browser
-
-from rich import print
 from typing import List
-from ytmusicapi import YTMusic
 
 import typer
+from rich import print
+from ytmusicapi import YTMusic
+
+from ..core.logging import logger
+from ..tools.macos import browser
 
 app = typer.Typer()
 yt = YTMusic()
@@ -18,7 +18,6 @@ def search_command(
 ):
     """this command search query in safari browser"""
     try:
-
         if not query:
             print("[red] enter your query to search e.g. --q 'who i am' ")
             raise typer.Exit()
