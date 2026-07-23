@@ -52,6 +52,7 @@ def play_song(song: List[str] = typer.Argument(..., help="song name")):
             wait=True,
             locate=True,
         )
+
     except RuntimeError:
         logger.error("can't find song for the query")
     else:
