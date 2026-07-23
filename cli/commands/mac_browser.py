@@ -1,5 +1,5 @@
-from ..tools.macos import browser
 from ..core.logging import logger
+from ..tools.macos import browser
 
 from rich import print
 from typing import List
@@ -17,23 +17,26 @@ def search_command(
     query: str = typer.Option(..., "--q", help="Search query"),
 ):
     """this command search query in safari browser"""
-    if not query:
-        typer.echo("Error: Provide search terms with --q")
-        raise typer.Exit()
+    try:
 
-    query_formatted = query.title()
+        if not query:
+            print("[red] enter your query to search e.g. --q 'who i am' ")
+            raise typer.Exit()
+        browser.search_browser(query=query.title())
 
-    print(f"[green]search for: {query} on Safari [/green]")
+    except Exception:
+        pass
+    else:
+        print(f"[green]searching for... {query.title()}\n")
 
-    # handle_exceptions(browser.search_browser, query_formatted)
 
-
+# play song
 @app.command("play")
 def play_song(song: List[str] = typer.Argument(..., help="song name")):
     try:
-        formate_song = " ".join(song).title()
+        concate_song = " ".join(song).title()
 
-        search_song = yt.search(query=formate_song, filter="songs")
+        search_song = yt.search(query=concate_song, filter="songs")
 
         if not search_song:
             print("[red]Can't find song. Check spelling again.[/red]")

@@ -41,3 +41,5 @@ def run_process(script: str):
         logger.exception(f"Unexpected error running AppleScript: {err}")
         print("[red]Something went wrong while running the command.[/red]\n")
         return None
+    else:
+        print("[blue]script executed successfully[/blue]\n")
