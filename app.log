@@ -1,37 +1,136 @@
-2026-07-23 13:05:36 | INFO | main.py:6 | Application starting
-2026-07-23 13:05:36 | INFO | main.py:8 | Starting CLI app
-2026-07-23 13:05:36 | ERROR | run_script.py:22 | AppleScript error: (code 1): 26:34: execution error: Can’t get application "Dfr". (-1728)
-2026-07-23 13:05:36 | WARNING | run_script.py:36 | wrong command name: 26:34: execution error: Can’t get application "Dfr". (-1728)
-2026-07-23 13:05:36 | INFO | main.py:17 | Application stopped
-2026-07-23 13:06:23 | INFO | main.py:6 | Application starting
-2026-07-23 13:06:23 | INFO | main.py:8 | Starting CLI app
-2026-07-23 13:06:23 | ERROR | run_script.py:22 | AppleScript error: (code 1): 25:33: execution error: Can’t get application "34". (-1728)
-2026-07-23 13:06:23 | WARNING | run_script.py:37 | wrong command name: 25:33: execution error: Can’t get application "34". (-1728)
-2026-07-23 13:06:23 | INFO | main.py:17 | Application stopped
-2026-07-23 13:06:39 | INFO | main.py:6 | Application starting
-2026-07-23 13:06:39 | INFO | main.py:8 | Starting CLI app
-2026-07-23 13:06:39 | INFO | main.py:17 | Application stopped
-2026-07-23 13:09:43 | INFO | main.py:6 | Application starting
-2026-07-23 13:09:43 | INFO | main.py:8 | Starting CLI app
-2026-07-23 13:09:43 | INFO | main.py:17 | Application stopped
-2026-07-23 13:21:09 | INFO | main.py:6 | Application starting
-2026-07-23 13:21:09 | INFO | main.py:8 | Starting CLI app
-2026-07-23 13:21:09 | INFO | main.py:17 | Application stopped
-2026-07-23 13:21:33 | INFO | main.py:6 | Application starting
-2026-07-23 13:21:33 | INFO | main.py:8 | Starting CLI app
-2026-07-23 13:21:33 | INFO | main.py:17 | Application stopped
-2026-07-23 13:23:43 | INFO | main.py:6 | Application starting
-2026-07-23 13:23:43 | INFO | main.py:8 | Starting CLI app
-2026-07-23 13:23:43 | INFO | main.py:17 | Application stopped
-2026-07-23 13:42:29 | INFO | main.py:6 | Application starting
-2026-07-23 13:42:29 | INFO | main.py:8 | Starting CLI app
-2026-07-23 13:42:29 | INFO | main.py:17 | Application stopped
-2026-07-23 13:42:41 | INFO | main.py:6 | Application starting
-2026-07-23 13:42:41 | INFO | main.py:8 | Starting CLI app
-2026-07-23 13:42:42 | INFO | main.py:17 | Application stopped
-2026-07-23 13:43:07 | INFO | main.py:6 | Application starting
-2026-07-23 13:43:07 | INFO | main.py:8 | Starting CLI app
-2026-07-23 13:43:08 | INFO | main.py:17 | Application stopped
-2026-07-23 13:43:29 | INFO | main.py:6 | Application starting
-2026-07-23 13:43:29 | INFO | main.py:8 | Starting CLI app
-2026-07-23 13:43:29 | INFO | main.py:17 | Application stopped
+2026-07-23 20:34:54 | INFO | main.py:6 | Application starting
+2026-07-23 20:34:54 | INFO | main.py:8 | Starting CLI app
+2026-07-23 20:34:55 | ERROR | mac_browser.py:58 | runtime error while playing song... 
+Traceback (most recent call last):
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/cli/commands/mac_browser.py", line 43, in play_song
+    raise typer.Exit()
+typer._click.exceptions.Exit
+2026-07-23 20:34:55 | INFO | main.py:17 | Application stopped
+2026-07-23 20:36:11 | INFO | main.py:6 | Application starting
+2026-07-23 20:36:11 | INFO | main.py:8 | Starting CLI app
+2026-07-23 20:36:13 | ERROR | mac_browser.py:58 | runtime error while playing song... 
+Traceback (most recent call last):
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/cli/commands/mac_browser.py", line 43, in play_song
+    raise typer.Exit()
+typer._click.exceptions.Exit
+2026-07-23 20:36:13 | INFO | main.py:17 | Application stopped
+2026-07-23 20:36:21 | INFO | main.py:6 | Application starting
+2026-07-23 20:36:21 | INFO | main.py:8 | Starting CLI app
+2026-07-23 20:36:21 | INFO | main.py:17 | Application stopped
+2026-07-23 20:37:46 | INFO | main.py:6 | Application starting
+2026-07-23 20:37:46 | INFO | main.py:8 | Starting CLI app
+2026-07-23 20:37:47 | ERROR | mac_browser.py:58 | something went wrong: can't find song
+Traceback (most recent call last):
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/cli/commands/mac_browser.py", line 43, in play_song
+    raise RuntimeError("can't find song")
+RuntimeError: can't find song
+2026-07-23 20:37:47 | INFO | main.py:17 | Application stopped
+2026-07-23 20:38:38 | INFO | main.py:6 | Application starting
+2026-07-23 20:38:38 | INFO | main.py:8 | Starting CLI app
+2026-07-23 20:38:40 | ERROR | mac_browser.py:58 | something went wrong: list index out of range
+Traceback (most recent call last):
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/cli/commands/mac_browser.py", line 45, in play_song
+    song_id = search_song[0].get("videoId")
+              ~~~~~~~~~~~^^^
+IndexError: list index out of range
+2026-07-23 20:38:40 | INFO | main.py:17 | Application stopped
+2026-07-23 20:39:40 | INFO | main.py:6 | Application starting
+2026-07-23 20:39:40 | INFO | main.py:8 | Starting CLI app
+2026-07-23 20:39:42 | ERROR | mac_browser.py:61 | something went wrong: list index out of range
+Traceback (most recent call last):
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/cli/commands/mac_browser.py", line 45, in play_song
+    song_id = search_song[0].get("videoId")
+              ~~~~~~~~~~~^^^
+IndexError: list index out of range
+2026-07-23 20:39:42 | INFO | main.py:17 | Application stopped
+2026-07-23 20:39:46 | INFO | main.py:6 | Application starting
+2026-07-23 20:39:46 | INFO | main.py:8 | Starting CLI app
+2026-07-23 20:39:47 | ERROR | mac_browser.py:60 | something went wrong: list index out of range
+Traceback (most recent call last):
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/cli/commands/mac_browser.py", line 45, in play_song
+    song_id = search_song[0].get("videoId")
+              ~~~~~~~~~~~^^^
+IndexError: list index out of range
+2026-07-23 20:39:47 | INFO | main.py:17 | Application stopped
+2026-07-23 20:41:19 | INFO | main.py:6 | Application starting
+2026-07-23 20:41:19 | INFO | main.py:8 | Starting CLI app
+2026-07-23 20:41:21 | ERROR | main.py:14 | Application failed
+Traceback (most recent call last):
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/main.py", line 9, in main
+    my_cli_app()
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/_click/core.py", line 807, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/core.py", line 1203, in main
+    return _main(
+           ^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/core.py", line 189, in _main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/core.py", line 1125, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/_click/core.py", line 746, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/_click/core.py", line 489, in invoke
+    return callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/cli/commands/mac_browser.py", line 45, in play_song
+    song_id = search_song[0].get("videoId")
+              ~~~~~~~~~~~^^^
+IndexError: list index out of range
+2026-07-23 20:41:21 | INFO | main.py:17 | Application stopped
+2026-07-23 20:41:32 | INFO | main.py:6 | Application starting
+2026-07-23 20:41:32 | INFO | main.py:8 | Starting CLI app
+2026-07-23 20:41:35 | ERROR | main.py:14 | Application failed
+Traceback (most recent call last):
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/main.py", line 9, in main
+    my_cli_app()
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/_click/core.py", line 807, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/core.py", line 1203, in main
+    return _main(
+           ^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/core.py", line 189, in _main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/core.py", line 1125, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/_click/core.py", line 746, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/_click/core.py", line 489, in invoke
+    return callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/.venv/lib/python3.11/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surjanthakur/Documents/Documents/CLI-agent/cli/commands/mac_browser.py", line 45, in play_song
+    song_id = search_song[0].get("videoId")
+              ~~~~~~~~~~~^^^
+IndexError: list index out of range
+2026-07-23 20:41:35 | INFO | main.py:17 | Application stopped
+2026-07-23 20:42:02 | INFO | main.py:6 | Application starting
+2026-07-23 20:42:02 | INFO | main.py:8 | Starting CLI app
+2026-07-23 20:42:03 | ERROR | mac_browser.py:57 | can't find song for the query
+2026-07-23 20:42:03 | INFO | main.py:17 | Application stopped
+2026-07-23 20:42:09 | INFO | main.py:6 | Application starting
+2026-07-23 20:42:09 | INFO | main.py:8 | Starting CLI app
+2026-07-23 20:42:10 | ERROR | mac_browser.py:57 | can't find song for the query
+2026-07-23 20:42:10 | INFO | main.py:17 | Application stopped

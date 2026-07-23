@@ -4,10 +4,10 @@ from ..tools.macos import browser
 from rich import print
 from typing import List
 from ytmusicapi import YTMusic
+
 import typer
 
 app = typer.Typer()
-
 yt = YTMusic()
 
 
@@ -39,8 +39,8 @@ def play_song(song: List[str] = typer.Argument(..., help="song name")):
         search_song = yt.search(query=concate_song, filter="songs")
 
         if not search_song:
-            print("[red]Can't find song. Check spelling again.[/red]")
-            raise typer.Exit()
+            print("[red]Can't find song. Check spelling again.[/red]\n")
+            raise typer.Exit(1)
 
         song_id = search_song[0].get("videoId")
 
@@ -53,7 +53,7 @@ def play_song(song: List[str] = typer.Argument(..., help="song name")):
             wait=True,
             locate=True,
         )
-
-    except Exception as err:
-        print("[red] someting went wrong try again [/red]")
-        logger.exception(err)
+    except RuntimeError:
+        logger.error("can't find song for the query")
+    else:
+        print(f"[green]playing song... {concate_song} on ytMusic.\n")
