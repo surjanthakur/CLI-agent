@@ -1,5 +1,4 @@
 from ..tools.macos import browser
-from ..utils.exceptions import handle_exceptions
 from ..core.logging import logger
 
 from rich import print
@@ -26,7 +25,7 @@ def search_command(
 
     print(f"[green]search for: {query} on Safari [/green]")
 
-    handle_exceptions(browser.search_browser, query_formatted)
+    # handle_exceptions(browser.search_browser, query_formatted)
 
 
 @app.command("play")

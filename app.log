@@ -1,0 +1,16 @@
+2026-07-23 13:05:36 | INFO | main.py:6 | Application starting
+2026-07-23 13:05:36 | INFO | main.py:8 | Starting CLI app
+2026-07-23 13:05:36 | ERROR | run_script.py:22 | AppleScript error: (code 1): 26:34: execution error: Can’t get application "Dfr". (-1728)
+2026-07-23 13:05:36 | WARNING | run_script.py:36 | wrong command name: 26:34: execution error: Can’t get application "Dfr". (-1728)
+2026-07-23 13:05:36 | INFO | main.py:17 | Application stopped
+2026-07-23 13:06:23 | INFO | main.py:6 | Application starting
+2026-07-23 13:06:23 | INFO | main.py:8 | Starting CLI app
+2026-07-23 13:06:23 | ERROR | run_script.py:22 | AppleScript error: (code 1): 25:33: execution error: Can’t get application "34". (-1728)
+2026-07-23 13:06:23 | WARNING | run_script.py:37 | wrong command name: 25:33: execution error: Can’t get application "34". (-1728)
+2026-07-23 13:06:23 | INFO | main.py:17 | Application stopped
+2026-07-23 13:06:39 | INFO | main.py:6 | Application starting
+2026-07-23 13:06:39 | INFO | main.py:8 | Starting CLI app
+2026-07-23 13:06:39 | INFO | main.py:17 | Application stopped
+2026-07-23 13:09:43 | INFO | main.py:6 | Application starting
+2026-07-23 13:09:43 | INFO | main.py:8 | Starting CLI app
+2026-07-23 13:09:43 | INFO | main.py:17 | Application stopped

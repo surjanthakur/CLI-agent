@@ -1,5 +1,5 @@
-from src.commands.app import app as my_cli_app
-from src.core.logging import logger
+from cli.core.logging import logger
+from cli.commands.app import app as my_cli_app
 
 
 def main():

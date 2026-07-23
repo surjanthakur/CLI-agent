@@ -1,5 +1,4 @@
 from ..tools.macos import apps
-from ..utils.exceptions import handle_exceptions
 
 from rich import print
 
@@ -12,8 +11,7 @@ app = typer.Typer()
 @app.command("open", help="Open an application by name")
 def open_command(name: list[str] = typer.Argument(..., help="Name of the app to open")):
     extract_name = " ".join(name)
-    print(f"[green] opened {extract_name} [/green]")
-    handle_exceptions(apps.open_app, extract_name)
+    apps.open_app(extract_name)
 
 
 # close app
@@ -23,7 +21,7 @@ def close_command(
 ):
     extract_name = " ".join(name)
     print(f"[green] closed {extract_name} [/green]")
-    handle_exceptions(apps.close_app, extract_name)
+    apps.close_app(extract_name)
 
 
 # hide app
@@ -31,7 +29,7 @@ def close_command(
 def hide_command(name: list[str] = typer.Argument(..., help="Name of the app to hide")):
     extract_name = " ".join(name)
     print(f"[green] hid {extract_name} [/green]")
-    handle_exceptions(apps.hide_app, extract_name)
+    apps.hide_app(extract_name)
 
 
 # unhide app
@@ -41,4 +39,4 @@ def unhide_command(
 ):
     extract_name = " ".join(name)
     print(f"[green] unhid {extract_name} [/green]")
-    handle_exceptions(apps.unhide_app, extract_name)
+    apps.unhide_app(extract_name)
