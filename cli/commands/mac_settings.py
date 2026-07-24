@@ -1,10 +1,13 @@
+import logging
+
 import typer
 from rich import print
 
-from ..core.logging import logger
 from ..tools.macos import mac_settings
 
 app = typer.Typer()
+
+logger = logging.getLogger(__name__)
 
 
 # change sound

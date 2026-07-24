@@ -1,5 +1,8 @@
-from cli.core.logging import logger
+import logging
+
 from cli.commands.app import app as my_cli_app
+
+logger = logging.getLogger(__name__)
 
 
 def main():

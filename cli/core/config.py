@@ -10,8 +10,7 @@ class Settings(BaseSettings):
         case_sensitive=False,
         extra="ignore",
     )
-    PAPERTRAIL_HOST: str
-    PAPERTRAIL_TOKEN: str
+    SENTRY_DNS: str
 
 
 settings = Settings()

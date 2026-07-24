@@ -1,7 +1,9 @@
+import logging
 import subprocess
-from ...core.logging import logger
 
 from rich import print
+
+logger = logging.getLogger(__name__)
 
 
 # run osascript in subprocess
@@ -27,7 +29,7 @@ def run_process(script: str):
     except FileNotFoundError:
         logger.warning("osascript command not found. Are you on macOS?")
         print("[red]osascript not found. This only works on macOS.[/red]\n")
-        return None
+        return
 
     except TimeoutError:
         logger.warning("Timeout error while running subprocess osascript")
@@ -37,9 +39,9 @@ def run_process(script: str):
         logger.warning(f"wrong command name: {process.stderr.strip()}")
         print(f"[red]{process.stderr.strip()}[/red]\n")
 
-    except Exception as err:
-        logger.exception(f"Unexpected error running AppleScript: {err}")
-        print("[red]Something went wrong while running the command.[/red]\n")
-        return None
+    except Exception:
+        logger.exception("Unexpected error on running AppleScript")
+        print("[red]Something went wrong while running this command.[/red]\n")
+        return
     else:
         print("[blue]script executed successfully[/blue]\n")

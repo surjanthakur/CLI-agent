@@ -1,12 +1,14 @@
+import logging
+
 import typer
 from rich import print
 from ytmusicapi import YTMusic
 
-from ..core.logging import logger
 from ..tools.macos import browser
 
 app = typer.Typer()
 yt = YTMusic()
+logger = logging.getLogger(__name__)
 
 
 # browser search
