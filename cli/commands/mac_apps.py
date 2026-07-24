@@ -12,7 +12,9 @@ logger = logging.getLogger(__name__)
 
 # opne app
 @app.command("open", help="Open an application by name")
-def open_command(name: list[str] = typer.Argument(..., help="Name of the app to open")):
+def open_command(
+    name: list[str] = typer.Argument(..., help="Name of the app to open")  # noqa: B008
+):
     try:
         extract_name = " ".join(name)
         apps.open_app(extract_name)
@@ -20,6 +22,7 @@ def open_command(name: list[str] = typer.Argument(..., help="Name of the app to 
     except KeyboardInterrupt:
         logger.info("Operation cancelled by user while opening app")
         print("[red]Operation cancelled by user.[/red]")
+        raise typer.Exit(1)
     else:
         print(f"[green] opened app {extract_name}...[/green]\n")
 
@@ -27,7 +30,7 @@ def open_command(name: list[str] = typer.Argument(..., help="Name of the app to 
 # close app
 @app.command("close", help="Close an application by name")
 def close_command(
-    name: list[str] = typer.Argument(..., help="Name of the app to close"),
+    name: list[str] = typer.Argument(..., help="Name of the app to close")  # noqa: B008
 ):
     try:
         extract_name = " ".join(name)
@@ -42,7 +45,9 @@ def close_command(
 
 # hide app
 @app.command("hide", help="Hide an application by name")
-def hide_command(name: list[str] = typer.Argument(..., help="Name of the app to hide")):
+def hide_command(
+    name: list[str] = typer.Argument(..., help="Name of the app to hide")  # noqa: B008
+):
     try:
         extract_name = " ".join(name)
         apps.hide_app(extract_name)
@@ -57,7 +62,7 @@ def hide_command(name: list[str] = typer.Argument(..., help="Name of the app to 
 # unhide app
 @app.command("unhide", help="Unhide an application by name")
 def unhide_command(
-    name: list[str] = typer.Argument(..., help="Name of the app to unhide"),
+    name: list[str] = typer.Argument(..., help="app name to unhide")  # noqa: B008
 ):
     try:
         extract_name = " ".join(name)

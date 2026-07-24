@@ -4,9 +4,11 @@ import sentry_sdk
 
 from .config import settings
 
+# from .config import settings
+
 sentry_sdk.init(
     dsn=settings.SENTRY_DNS,
-    send_default_pii=True,
+    enable_logs=True,
 )
 
 logging.basicConfig(

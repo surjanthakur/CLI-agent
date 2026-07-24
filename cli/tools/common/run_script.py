@@ -29,7 +29,7 @@ def run_process(script: str):
     except FileNotFoundError:
         logger.warning("osascript command not found. Are you on macOS?")
         print("[red]osascript not found. This only works on macOS.[/red]\n")
-        return
+        return None  # noqa: RET501
 
     except TimeoutError:
         logger.warning("Timeout error while running subprocess osascript")
@@ -38,10 +38,11 @@ def run_process(script: str):
     except RuntimeError:
         logger.warning(f"wrong command name: {process.stderr.strip()}")
         print(f"[red]{process.stderr.strip()}[/red]\n")
+        return None  # noqa: RET501
 
     except Exception:
         logger.exception("Unexpected error on running AppleScript")
         print("[red]Something went wrong while running this command.[/red]\n")
-        return
+        return None  # noqa: RET501
     else:
         print("[blue]script executed successfully[/blue]\n")
