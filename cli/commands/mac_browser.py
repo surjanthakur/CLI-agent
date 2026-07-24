@@ -1,5 +1,3 @@
-from typing import List
-
 import typer
 from rich import print
 from ytmusicapi import YTMusic
@@ -23,15 +21,16 @@ def search_command(
             raise typer.Exit()
         browser.search_browser(query=query.title())
 
-    except Exception:
-        pass
+    except KeyboardInterrupt:
+        logger.warning("KeyboardInterrupt during search_command")
+        print("[red]you quit the M-copilot [/red]")
     else:
         print(f"[green]searching for... {query.title()}\n")
 
 
 # play song
 @app.command("play")
-def play_song(song: List[str] = typer.Argument(..., help="song name")):
+def play_song(song: list[str] = typer.Argument(..., help="song name")):
     try:
         concate_song = " ".join(song).title()
 
@@ -52,6 +51,10 @@ def play_song(song: List[str] = typer.Argument(..., help="song name")):
             wait=True,
             locate=True,
         )
+
+    except KeyboardInterrupt:
+        logger.warning("KeyboardInterrupt during play_song")
+        print("[red]user quit the play command [/red]")
 
     except RuntimeError:
         logger.error("can't find song for the query")
