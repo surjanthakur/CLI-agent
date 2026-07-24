@@ -38,11 +38,10 @@ def run_process(script: str):
     except RuntimeError:
         logger.warning(f"wrong command name: {process.stderr.strip()}")
         print(f"[red]{process.stderr.strip()}[/red]\n")
-        return None  # noqa: RET501
 
     except Exception:
         logger.exception("Unexpected error on running AppleScript")
         print("[red]Something went wrong while running this command.[/red]\n")
         return None  # noqa: RET501
     else:
-        print("[blue]script executed successfully[/blue]\n")
+        print("[bold blue]command executed successfully[/bold blue]\n")

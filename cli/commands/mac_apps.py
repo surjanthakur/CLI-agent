@@ -1,13 +1,10 @@
-import logging
-
 import typer
 from rich import print
 
+from ..core.logging import my_logger
 from ..tools.macos import apps
 
 app = typer.Typer()
-
-logger = logging.getLogger(__name__)
 
 
 # opne app
@@ -20,11 +17,9 @@ def open_command(
         apps.open_app(extract_name)
 
     except KeyboardInterrupt:
-        logger.info("Operation cancelled by user while opening app")
+        my_logger.info("Operation cancelled by user while opening app")
         print("[red]Operation cancelled by user.[/red]")
         raise typer.Exit(1)
-    else:
-        print(f"[green] opened app {extract_name}...[/green]\n")
 
 
 # close app
@@ -37,10 +32,8 @@ def close_command(
         apps.close_app(extract_name)
 
     except KeyboardInterrupt:
-        logger.info("Operation cancelled by user while closing app")
+        my_logger.info("Operation cancelled by user while closing app")
         print("[red]Operation cancelled by user.[/red]")
-    else:
-        print(f"[green] closed app {extract_name}...[/green]\n")
 
 
 # hide app
@@ -53,10 +46,8 @@ def hide_command(
         apps.hide_app(extract_name)
 
     except KeyboardInterrupt:
-        logger.info("Operation cancelled by user while hiding app")
+        my_logger.info("Operation cancelled by user while hiding app")
         print("[red]Operation cancelled by user.[/red]")
-    else:
-        print(f"[green] hid app {extract_name}...[/green]\n")
 
 
 # unhide app
@@ -69,7 +60,5 @@ def unhide_command(
         apps.unhide_app(extract_name)
 
     except KeyboardInterrupt:
-        logger.info("Operation cancelled by user while unhiding app")
+        my_logger.info("Operation cancelled by user while unhiding app")
         print("[red]Operation cancelled by user.[/red]")
-    else:
-        print(f"[green] unhid app {extract_name}...[/green]\n")

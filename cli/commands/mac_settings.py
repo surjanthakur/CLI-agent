@@ -1,23 +1,22 @@
-import logging
-
 import typer
 from rich import print
 
+from ..core.logging import my_logger
 from ..tools.macos import mac_settings
 
 app = typer.Typer()
 
-logger = logging.getLogger(__name__)
-
 
 # change sound
 @app.command("sound", help="Change system sound volume")
-def change_sound(value: int = typer.Argument(..., help="Volume level (0-100)")):
+def change_sound(
+    value: int = typer.Argument(..., help="Volume level (0-100)", min=1, max=100)
+):
     try:
         mac_settings.adjust_sound(value)
 
     except KeyboardInterrupt:
-        logger.warning("KeyboardInterrupt during change_sound command")
+        my_logger.warning("KeyboardInterrupt during change_sound command")
         print("[green]user exit the command")
     else:
         print(f"[green] set volume level to {value}[/green]")
@@ -30,7 +29,7 @@ def mute_sound():
         mac_settings.mute_sound()
 
     except KeyboardInterrupt:
-        logger.warning("KeyboardInterrupt during mute_sound command")
+        my_logger.warning("KeyboardInterrupt during mute_sound command")
         print("[green]user exit the command")
     else:
         print("[green]set volume level to mute[/green]")
@@ -43,7 +42,7 @@ def unmute_sound():
         mac_settings.unmute()
 
     except KeyboardInterrupt:
-        logger.warning("KeyboardInterrupt during unmute_sound command")
+        my_logger.warning("KeyboardInterrupt during unmute_sound command")
         print("[green]user exit the command")
     else:
         print("[green]set previous mute level to unmute[/green]")
@@ -57,7 +56,7 @@ def clear_menu(target: str = typer.Argument(..., help="pass target: menu")):
             mac_settings.recent_clear_menu()
 
     except KeyboardInterrupt:
-        logger.warning("KeyboardInterrupt during clear_menu command")
+        my_logger.warning("KeyboardInterrupt during clear_menu command")
         print("[green]user exit the command")
     else:
         print("[green]Cleared Recent Menu[/green]")
@@ -70,7 +69,7 @@ def sleep_mode():
         mac_settings.sleep_mode()
 
     except KeyboardInterrupt:
-        logger.warning("KeyboardInterrupt during sleep_mode command")
+        my_logger.warning("KeyboardInterrupt during sleep_mode command")
         print("[green]user exit the command")
     else:
         print("[green]put mac on sleep mode[/green]")
@@ -82,7 +81,7 @@ def lock_mode():
     try:
         mac_settings.lock_screen()
     except KeyboardInterrupt:
-        logger.warning("KeyboardInterrupt during lock_mode command")
+        my_logger.warning("KeyboardInterrupt during lock_mode command")
         print("[green]user exit the command")
     else:
         print("[green]locked your mac[/green]")

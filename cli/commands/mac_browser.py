@@ -1,14 +1,12 @@
-import logging
-
 import typer
 from rich import print
 from ytmusicapi import YTMusic
 
+from ..core.logging import my_logger
 from ..tools.macos import browser
 
 app = typer.Typer()
 yt = YTMusic()
-logger = logging.getLogger(__name__)
 
 
 # browser search
@@ -24,7 +22,7 @@ def search_command(
         browser.search_browser(query=query.title())
 
     except KeyboardInterrupt:
-        logger.warning("KeyboardInterrupt during search_command")
+        my_logger.warning("KeyboardInterrupt during search_command")
         print("[red]you quit the M-copilot [/red]")
     else:
         print(f"[green]searching for... {query.title()}\n")
@@ -32,7 +30,7 @@ def search_command(
 
 # play song
 @app.command("play")
-def play_song(song: list[str] = typer.Argument(..., help="song name")):
+def play_song(song: list[str] = typer.Argument(..., help="song name")):  # noqa: B008
     try:
         concate_song = " ".join(song).title()
 
@@ -55,10 +53,10 @@ def play_song(song: list[str] = typer.Argument(..., help="song name")):
         )
 
     except KeyboardInterrupt:
-        logger.warning("KeyboardInterrupt during play_song")
+        my_logger.warning("KeyboardInterrupt during play_song")
         print("[red]user quit the play command [/red]")
 
     except RuntimeError:
-        logger.error("can't find song for the query")
+        my_logger.error("can't find song for the query")
     else:
         print(f"[green]playing song... {concate_song} on ytMusic.\n")
