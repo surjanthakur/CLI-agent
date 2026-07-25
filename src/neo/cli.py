@@ -1,8 +1,8 @@
 import typer
 
-from .mac_apps import close_command, hide_command, open_command, unhide_command
-from .mac_browser import play_song, search_command
-from .mac_settings import (
+from .commands.mac_apps import close_command, hide_command, open_command, unhide_command
+from .commands.mac_browser import play_song, search_command
+from .commands.mac_settings import (
     change_sound,
     clear_menu,
     lock_mode,
@@ -10,6 +10,7 @@ from .mac_settings import (
     sleep_mode,
     unmute_sound,
 )
+from .core.logging import my_logger
 
 app = typer.Typer(
     help="mac-cli-agent lets you control macOS apps, browser actions, and system settings from the terminal."
@@ -44,3 +45,25 @@ app.command(name="lock", help="Lock the computer screen.")(lock_mode)
 app.command(name="search", help="Search a query in the browser.")(search_command)
 
 app.command(name="play", help="Play a song in browser-based music.")(play_song)
+
+
+# run neo cli app
+def neo_cli_app():
+    my_logger.info("Application starting")
+    try:
+        my_logger.info("Starting CLI app")
+        app()
+
+    except KeyboardInterrupt:
+        my_logger.warning("Application interrupted by user")
+        raise
+
+    except Exception:
+        my_logger.exception("Application failed")
+        raise
+    finally:
+        my_logger.info("Application stopped")
+
+
+if __name__ == "__main__":
+    neo_cli_app()
