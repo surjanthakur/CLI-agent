@@ -1,8 +1,9 @@
 [project]
-name = "cli-agent"
+name = "neo"
 version = "0.1.0"
-description = "A personal, fully local CLI agent that can access Mac apps, open/close them, search the internet through the browser, and act as your second brain"
+description = "A personal, fully local CLI agent that can access Mac apps, open/close them, search the internet through the browser."
 readme = "README.md"
+authors = ["Surjan <tsurjan506@gmail.com>"]
 requires-python = ">=3.11"
 dependencies = [
     "pydantic>=2.13.4",
@@ -11,3 +12,11 @@ dependencies = [
     "typer>=0.26.8",
     "ytmusicapi>=1.12.1",
 ]
+
+
+[project.scripts]
+neo = "neo.main:app"
+
+[build-system]
+requires = ["uv_build>=0.8.14,<0.9.0"]
+build-backend = "uv_build"

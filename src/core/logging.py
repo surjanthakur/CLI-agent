@@ -1,5 +1,7 @@
 import logging
 
+from .config import settings
+
 # import sentry_sdk
 
 # from .config import settings
@@ -10,7 +12,7 @@ import logging
 # )
 
 logging.basicConfig(
-    level=logging.INFO,
+    level=settings.LOGS_LEVEL,
     filename="app.log",
     format="%(asctime)s - %(levelname)s - %(filename)s:%(lineno)d - %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S",

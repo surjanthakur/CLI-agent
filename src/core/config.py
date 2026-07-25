@@ -11,6 +11,7 @@ class Settings(BaseSettings):
         extra="ignore",
     )
     SENTRY_DNS: str
+    LOGS_LEVEL: str
 
 
 settings = Settings()
