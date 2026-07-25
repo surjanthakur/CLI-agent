@@ -1,10 +1,16 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "neo"
 version = "0.1.0"
 description = "A personal, fully local CLI agent that can access Mac apps, open/close them, search the internet through the browser."
 readme = "README.md"
-authors = ["Surjan <tsurjan506@gmail.com>"]
-license = "MIT"
+authors = [
+    { name = "Surjan", email = "tsurjan506@gmail.com" }
+]
+license = { text = "MIT" }
 requires-python = ">=3.11"
 dependencies = [
     "pydantic>=2.13.4",
@@ -14,17 +20,11 @@ dependencies = [
     "ytmusicapi>=1.12.1",
 ]
 
-
 [project.scripts]
-neo = "src.commands.app:app"
-
-[build-system]
-requires = ["setuptools>=68", "wheel"]
-build-backend = "setuptools.build_meta"
+neo = "neo.cli:app"
 
 [tool.setuptools]
-include-package-data = true
+package-dir = {"" = "src"}
 
 [tool.setuptools.packages.find]
-where = ["."]
-include = ["src", "src.*"]
+where = ["src"]

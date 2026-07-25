@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: neo
+Version: 0.1.0
+Summary: A personal, fully local CLI agent that can access Mac apps, open/close them, search the internet through the browser.
+Author-email: Surjan <tsurjan506@gmail.com>
+License: MIT
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pydantic>=2.13.4
+Requires-Dist: pydantic-settings>=2.14.2
+Requires-Dist: sentry-sdk>=2.35.0
+Requires-Dist: typer>=0.26.8
+Requires-Dist: ytmusicapi>=1.12.1
+Dynamic: license-file
+
+# CLI-agent
+a personal fully local run in cli-terminal , can access mac apps open close. search internet through browser. work like your second brain

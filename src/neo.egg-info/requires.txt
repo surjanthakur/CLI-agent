@@ -1,0 +1,5 @@
+pydantic>=2.13.4
+pydantic-settings>=2.14.2
+sentry-sdk>=2.35.0
+typer>=0.26.8
+ytmusicapi>=1.12.1
