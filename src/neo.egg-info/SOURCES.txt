@@ -23,3 +23,6 @@ src/neo/tools/macos/__init__.py
 src/neo/tools/macos/apps.py
 src/neo/tools/macos/browser.py
 src/neo/tools/macos/mac_settings.py
+tests/test_apps.py
+tests/test_browser.py
+tests/test_settings.py
