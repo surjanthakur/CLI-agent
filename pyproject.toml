@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "clark-m"
-version = "0.1.0"
+version = "0.1.1"
 description = "A personal, fully local cli Clark that can access Mac apps and more."
 readme = "README.md"
 authors = [
