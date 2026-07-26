@@ -11,7 +11,7 @@ from .commands.mac_settings import (
     sleep_mode,
     unmute_sound,
 )
-from .core.logging import my_logger
+from .core.logging import init_sentry_logs, my_logger
 
 app = typer.Typer(help="""
     [green]clark cli lets you control macOS apps, browser actions, and system settings from the terminal.
@@ -59,6 +59,7 @@ def neo_cli_app():
     my_logger.info("Application starting")
     try:
         my_logger.info("Starting CLI app")
+        init_sentry_logs()
         app()
 
     except KeyboardInterrupt:
