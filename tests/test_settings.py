@@ -1,7 +1,7 @@
 import pytest
 from typer.testing import CliRunner
 
-from src.neo.commands import mac_settings
+from src.clark.commands import mac_settings
 
 runner = CliRunner()
 
@@ -17,7 +17,9 @@ runner = CliRunner()
         ("lock", [], "lock_screen", "locked your mac"),
     ],
 )
-def test_settings_commands_call_expected_helper(monkeypatch, command_name, args, method_name, expected_output):
+def test_settings_commands_call_expected_helper(
+    monkeypatch, command_name, args, method_name, expected_output
+):
     called = {}
 
     def fake_handler(*value):

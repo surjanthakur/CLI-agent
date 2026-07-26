@@ -1,7 +1,7 @@
 import pytest
 from typer.testing import CliRunner
 
-from src.neo.commands import mac_apps
+from src.clark.commands import mac_apps
 
 runner = CliRunner()
 

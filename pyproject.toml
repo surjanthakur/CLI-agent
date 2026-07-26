@@ -3,9 +3,9 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "neo"
+name = "clark"
 version = "0.1.0"
-description = "A personal, fully local cli Neo that can access Mac apps and more."
+description = "A personal, fully local cli Clark that can access Mac apps and more."
 readme = "README.md"
 authors = [
     { name = "Surjan", email = "tsurjan506@gmail.com" }
@@ -23,7 +23,7 @@ dependencies = [
 ]
 
 [project.scripts]
-neo = "neo.cli:app"
+neo = "clark.cli:app"
 
 [tool.setuptools]
 package-dir = {"" = "src"}

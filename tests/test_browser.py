@@ -1,6 +1,6 @@
 from typer.testing import CliRunner
 
-from src.neo.commands import mac_browser
+from src.clark.commands import mac_browser
 
 runner = CliRunner()
 
