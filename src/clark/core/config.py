@@ -12,6 +12,7 @@ class Settings(BaseSettings):
     )
     SENTRY_DNS: str
     LOGS_LEVEL: str
+    ENVIRONMENT: str
 
 
 settings = Settings()
