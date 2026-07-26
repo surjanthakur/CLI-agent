@@ -1,2 +1,128 @@
-# CLI-agent
-a personal fully local run in cli-terminal , can access mac apps open close. search internet through browser. work like your second brain
+# Clark CLI
+
+Clark CLI is a personal, fully local command-line assistant for macOS. It lets you control apps, search the web, play music, and manage simple system actions directly from your terminal.
+
+This project is designed to feel like a second brain for everyday tasks on your Mac, without relying on any cloud service.
+
+## What this project does
+
+Clark CLI can help you perform these tasks:
+
+- Open, close, hide, and unhide macOS applications
+- Search the web using Safari
+- Play songs from YouTube Music in your browser
+- Adjust system volume and mute or unmute audio
+- Clear recent menu items
+- Put your Mac to sleep or lock the screen
+
+## Features
+
+- Fully local and terminal-based
+- Works directly with macOS apps and system controls
+- Built with Python and Typer
+- Simple command-line interface for daily actions
+
+## Installation
+
+Make sure you have Python 3.11 or newer installed.
+
+```bash
+cd /path/to/CLI-agent
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -e .
+```
+
+## How to run
+
+After installation, use the `clark` command:
+
+```bash
+clark --help
+```
+
+## Available commands
+
+### App management commands
+
+Open an app:
+
+```bash
+clark open "Visual Studio Code"
+```
+
+Close an app:
+
+```bash
+clark close "Google Chrome"
+```
+
+Hide an app:
+
+```bash
+clark hide "Safari"
+```
+
+Unhide an app:
+
+```bash
+clark unhide "Spotify"
+```
+
+### Browser commands
+
+Search the web in Safari:
+
+```bash
+clark search --q "python tutorial"
+```
+
+Play a song from YouTube Music:
+
+```bash
+clark play "Shape of You"
+```
+
+### System settings commands
+
+Set the system volume to 50:
+
+```bash
+clark sound 50
+```
+
+Mute system sound:
+
+```bash
+clark mute
+```
+
+Unmute system sound:
+
+```bash
+clark unmute
+```
+
+Clear recent menu entries:
+
+```bash
+clark clear menu
+```
+
+Put your Mac to sleep:
+
+```bash
+clark sleep
+```
+
+Lock your Mac screen:
+
+```bash
+clark lock
+```
+
+## Notes
+
+This package is intended for macOS and uses system automation features, so it works best on a Mac machine.
+
+Made With ❤️ by Surjan
