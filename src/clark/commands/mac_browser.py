@@ -19,7 +19,9 @@ def search_command(
         if not query:
             print("[red] enter your query to search e.g. --q 'who i am' ")
             raise typer.Exit()
+
         browser.search_browser(query=query.title())
+        my_logger.info("call the search_browser function")
 
     except KeyboardInterrupt:
         my_logger.warning("KeyboardInterrupt during search_command")
@@ -31,10 +33,12 @@ def search_command(
 # play song
 @app.command("play")
 def play_song(song: list[str] = typer.Argument(..., help="song name")):  # noqa: B008
+    """this function play song in ytmusic on your default set browser"""
     try:
         concate_song = " ".join(song).title()
 
         search_song = yt.search(query=concate_song, filter="songs")
+        my_logger.info(f"search for the song {concate_song}")
 
         if not search_song:
             print("[red]Can't find song. Check spelling again.[/red]\n")
@@ -43,14 +47,18 @@ def play_song(song: list[str] = typer.Argument(..., help="song name")):  # noqa:
         song_id = search_song[0].get("videoId")
 
         if not song_id:
-            print("[red]Video ID not found.[/red]")
+            my_logger.error("song ID not found")
+            print("[red]song ID not found.[/red]")
             raise typer.Exit()
+
+        my_logger.info(f"get the song ID {song_id}")
 
         typer.launch(
             url=f"https://music.youtube.com/watch?v={song_id}",
             wait=True,
             locate=True,
         )
+        my_logger.info("launch the typer_launch function")
 
     except KeyboardInterrupt:
         my_logger.warning("KeyboardInterrupt during play_song")

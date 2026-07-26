@@ -5,6 +5,7 @@ from src.clark.commands import mac_browser
 runner = CliRunner()
 
 
+# test web serach command
 def test_search_command_calls_browser(monkeypatch):
     called = {}
 
@@ -20,6 +21,7 @@ def test_search_command_calls_browser(monkeypatch):
     assert "searching for" in result.stdout
 
 
+# test play song command
 def test_play_song_command_launches_youtube_url(monkeypatch):
     launched = {}
 

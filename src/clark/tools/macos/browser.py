@@ -1,6 +1,7 @@
 from ..common import run_script
 
 
+# search web in safari
 def search_browser(query: str):
     """this function Search in specified browser"""
     script = f"""

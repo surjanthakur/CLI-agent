@@ -15,6 +15,7 @@ def open_command(
     try:
         extract_name = " ".join(name)
         apps.open_app(extract_name)
+        my_logger.info("call the open_app function")
 
     except KeyboardInterrupt:
         my_logger.info("Operation cancelled by user while opening app")
@@ -30,6 +31,7 @@ def close_command(
     try:
         extract_name = " ".join(name)
         apps.close_app(extract_name)
+        my_logger.info("call the close_app function")
 
     except KeyboardInterrupt:
         my_logger.info("Operation cancelled by user while closing app")
@@ -44,6 +46,7 @@ def hide_command(
     try:
         extract_name = " ".join(name)
         apps.hide_app(extract_name)
+        my_logger.info("call the hide_app function")
 
     except KeyboardInterrupt:
         my_logger.info("Operation cancelled by user while hiding app")
@@ -58,6 +61,7 @@ def unhide_command(
     try:
         extract_name = " ".join(name)
         apps.unhide_app(extract_name)
+        my_logger.info("call the unhide_app function")
 
     except KeyboardInterrupt:
         my_logger.info("Operation cancelled by user while unhiding app")

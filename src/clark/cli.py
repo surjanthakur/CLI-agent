@@ -1,3 +1,4 @@
+import sentry_sdk
 import typer
 
 from .commands.mac_apps import close_command, hide_command, open_command, unhide_command
@@ -12,39 +13,45 @@ from .commands.mac_settings import (
 )
 from .core.logging import my_logger
 
-app = typer.Typer(
-    help="mac-cli-agent lets you control macOS apps, browser actions, and system settings from the terminal."
-)
+app = typer.Typer(help="""
+    [green]clark cli lets you control macOS apps, browser actions, and system settings from the terminal.
+    Made With ❤️ by Surjan Thakur""")
 
 
 # mac app commands
-app.command(name="open", help="Open an application or file.")(open_command)
+app.command(name="open", help="[red] Open an application or file.")(open_command)
 
-app.command(name="close", help="Close an application.")(close_command)
+app.command(name="close", help="[red] Close an application.")(close_command)
 
-app.command(name="hide", help="Hide the current application.")(hide_command)
+app.command(name="hide", help="[red] Hide the current application.")(hide_command)
 
-app.command(name="unhide", help="Unhide a previously hidden application.")(
+app.command(name="unhide", help="[red] Unhide a previously hidden application.")(
     unhide_command
 )
 
 # system setting commands
-app.command(name="sound", help="Adjust the system volume.")(change_sound)
+app.command(name="sound", help="[yellow]Adjust the system volume.")(change_sound)
 
-app.command(name="mute", help="Mute system audio.")(mute_sound)
+app.command(name="mute", help="[yellow]Mute system audio.")(mute_sound)
 
-app.command(name="unmute", help="Unmute system audio.")(unmute_sound)
+app.command(name="unmute", help="[yellow]Unmute system audio.")(unmute_sound)
 
-app.command(name="clear", help="Clear the current menu or terminal state.")(clear_menu)
+app.command(name="clear", help="[yellow]Clear the current menu or terminal state.")(
+    clear_menu
+)
 
-app.command(name="sleep", help="Put the computer to sleep.")(sleep_mode)
+app.command(name="sleep", help="[yellow]Put the ststem to sleep.")(sleep_mode)
 
-app.command(name="lock", help="Lock the computer screen.")(lock_mode)
+app.command(name="lock", help="[yellow]Lock the system screen.")(lock_mode)
 
 # browser commands
-app.command(name="search", help="Search a query in the browser.")(search_command)
+app.command(name="search", help="[bold blue]Search a query in the browser.")(
+    search_command
+)
 
-app.command(name="play", help="Play a song in browser-based music.")(play_song)
+app.command(name="play", help="[bold blue]Play a song in browser-based music.")(
+    play_song
+)
 
 
 # run neo cli app
@@ -63,6 +70,7 @@ def neo_cli_app():
         raise
     finally:
         my_logger.info("Application stopped")
+        sentry_sdk.flush(timeout=0.2)
 
 
 if __name__ == "__main__":

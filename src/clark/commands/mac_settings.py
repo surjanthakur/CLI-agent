@@ -14,6 +14,7 @@ def change_sound(
 ):
     try:
         mac_settings.adjust_sound(value)
+        my_logger.info("call the adjust_sound function")
 
     except KeyboardInterrupt:
         my_logger.warning("KeyboardInterrupt during change_sound command")
@@ -27,6 +28,7 @@ def change_sound(
 def mute_sound():
     try:
         mac_settings.mute_sound()
+        my_logger.info("call the mute_sound function")
 
     except KeyboardInterrupt:
         my_logger.warning("KeyboardInterrupt during mute_sound command")
@@ -40,6 +42,7 @@ def mute_sound():
 def unmute_sound():
     try:
         mac_settings.unmute()
+        my_logger.info("call the unmute_sound function")
 
     except KeyboardInterrupt:
         my_logger.warning("KeyboardInterrupt during unmute_sound command")
@@ -54,6 +57,7 @@ def clear_menu(target: str = typer.Argument(..., help="pass target: menu")):
     try:
         if target:
             mac_settings.recent_clear_menu()
+            my_logger.info("call the recent_clear_meanu function")
 
     except KeyboardInterrupt:
         my_logger.warning("KeyboardInterrupt during clear_menu command")
@@ -67,6 +71,7 @@ def clear_menu(target: str = typer.Argument(..., help="pass target: menu")):
 def sleep_mode():
     try:
         mac_settings.sleep_mode()
+        my_logger.info("call the sleep_mode function")
 
     except KeyboardInterrupt:
         my_logger.warning("KeyboardInterrupt during sleep_mode command")
@@ -80,6 +85,8 @@ def sleep_mode():
 def lock_mode():
     try:
         mac_settings.lock_screen()
+        my_logger.info("call the lock_screen function")
+
     except KeyboardInterrupt:
         my_logger.warning("KeyboardInterrupt during lock_mode command")
         print("[green]user exit the command")

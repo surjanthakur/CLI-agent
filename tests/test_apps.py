@@ -15,6 +15,7 @@ runner = CliRunner()
         ("unhide", "unhide_app"),
     ],
 )
+# test all mac app commands
 def test_app_commands_call_expected_helper(monkeypatch, command_name, method_name):
     called = {}
 
