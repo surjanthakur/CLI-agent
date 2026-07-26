@@ -23,7 +23,7 @@ dependencies = [
 ]
 
 [project.scripts]
-neo = "clark.cli:app"
+clark = "clark.cli:app"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
