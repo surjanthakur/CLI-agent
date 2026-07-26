@@ -8,7 +8,6 @@ src/clark/commands/mac_apps.py
 src/clark/commands/mac_browser.py
 src/clark/commands/mac_settings.py
 src/clark/core/__init__.py
-src/clark/core/config.py
 src/clark/core/logging.py
 src/clark/tools/__init__.py
 src/clark/tools/common/__init__.py

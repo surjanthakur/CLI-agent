@@ -1,2 +1,2 @@
 [console_scripts]
-neo = clark.cli:app
+clark = clark.cli:app
