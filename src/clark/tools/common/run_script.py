@@ -6,9 +6,10 @@ from ...core.logging import my_logger
 
 
 # run osascript in subprocess
-def run_process(script: str):
-    """
-    Run an AppleScript and return its output (stdout).
+def run_process(script: str, timeout: int = 15) -> str | None:
+    """Run an AppleScript string and return its stdout.
+
+    Returns None if execution fails or is unsupported.
     """
 
     try:
@@ -19,32 +20,31 @@ def run_process(script: str):
             text=True,
             capture_output=True,
             check=False,
+            timeout=timeout,
         )
         if process.returncode != 0:
-            err_message = process.stderr.strip().title() or "Unknown AppleScript Error"
+            err_message = process.stderr.strip() or "Unknown AppleScript Error"
             my_logger.error(
                 f"AppleScript error: (code {process.returncode}): {err_message}"
             )
             raise RuntimeError(f"application error: {err_message}\n")
 
-        my_logger.info("end subprocess...")
+        my_logger.info("AppleScript executed successfully.")
 
     except FileNotFoundError:
         my_logger.warning("osascript command not found. Are you on macOS?")
-        print("[red]osascript not found. This only works on macOS.[/red]\n")
-        return None  # noqa: RET501
+        return None
 
-    except TimeoutError:
-        my_logger.warning("Timeout error while running subprocess osascript")
-        print("[red]takes too much time to run check internet!\n")
+    except subprocess.TimeoutExpired:
+        my_logger.error(f"AppleScript timed out after {timeout} seconds.")
+        return None
 
     except RuntimeError:
-        my_logger.warning(f"wrong command name: {process.stderr.strip()}")
-        print(f"[red]{process.stderr.strip()}[/red]\n")
+        raise
 
-    except Exception:  # noqa: BLE001
-        my_logger.exception("Unexpected error on running AppleScript")
-        print("[red]Something went wrong while running this command.[/red]\n")
-        return None  # noqa: RET501
+    except Exception as err:  # noqa: BLE001
+        my_logger.exception(f"Unexpected error running AppleScript: {err}")
+        return None
     else:
         print("[bold blue]command executed successfully[/bold blue]\n")
+        return process.stdout.strip()
