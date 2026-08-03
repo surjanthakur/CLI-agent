@@ -55,7 +55,7 @@ app.command(name="play", help="[bold blue]Play a song in browser-based music.")(
 
 
 # run neo cli app
-def neo_cli_app():
+def clark_cli_app():
     my_logger.info("Application starting")
     try:
         my_logger.info("Starting CLI app")
@@ -75,4 +75,4 @@ def neo_cli_app():
 
 
 if __name__ == "__main__":
-    neo_cli_app()
+    clark_cli_app()
