@@ -15,7 +15,7 @@ from .core.logging import init_sentry_logs, my_logger
 
 app = typer.Typer(help="""
     [green]clark cli lets you control macOS apps, browser actions, and system settings from the terminal.
-    Made With ❤️ by Surjan""")
+    Made With ❤️ by Surjan thakur""")
 
 
 # mac app commands
