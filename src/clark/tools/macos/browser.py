@@ -5,7 +5,7 @@ from ..common import run_script
 def search_browser(query: str):
     """this function Search in specified browser"""
     script = f"""
-         tell application "Safari"
+         tell application "Brave Browser"
             activate
             
             if not (exists window 1) then
