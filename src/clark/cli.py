@@ -63,9 +63,8 @@ def clark_cli_app():
         app()
 
     except KeyboardInterrupt:
-        my_logger.warning("Application interrupted by user")
+        my_logger.warning("Application interrupted by user ")
         raise
-
     except Exception:
         my_logger.exception("Application failed")
         raise
