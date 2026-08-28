@@ -21,8 +21,10 @@ my_logger.addHandler(logging.NullHandler())
 
 # sentry logs
 def init_sentry_logs():
-    "initialize sentry logs if env is production"
+    """initialize sentry logs if env is production"""
+
     if ENV == "production" and dsn:
+
         # Configure Sentry Logging Integration
         sentry_logging = LoggingIntegration(
             level=logs_level,  # Capture logs at this level
