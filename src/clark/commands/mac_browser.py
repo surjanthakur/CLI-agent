@@ -14,7 +14,7 @@ yt = YTMusic()
 def search_command(
     query: str = typer.Option(..., "--q", help="Search query"),
 ):
-    """this command search query in safari browser"""
+    """this command search query in browser"""
     try:
         if not query:
             print("[red] enter your query to search e.g. --q 'who i am' ")

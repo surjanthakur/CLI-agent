@@ -1,16 +1,7 @@
 import sentry_sdk
 import typer
 
-from .commands.mac_apps import close_command, hide_command, open_command, unhide_command
-from .commands.mac_browser import play_song, search_command
-from .commands.mac_settings import (
-    change_sound,
-    clear_menu,
-    lock_mode,
-    mute_sound,
-    sleep_mode,
-    unmute_sound,
-)
+from .commands import mac_apps, mac_browser, mac_settings
 from .core.logging import init_sentry_logs, my_logger
 
 app = typer.Typer(help="""
@@ -19,38 +10,48 @@ app = typer.Typer(help="""
 
 
 # mac app commands
-app.command(name="open", help="[red] Open an application or file.")(open_command)
+app.command(name="open", help="[red] Open an application or file.")(
+    mac_apps.open_command
+)
 
-app.command(name="close", help="[red] Close an application.")(close_command)
+app.command(name="close", help="[red] Close an application.")(mac_apps.close_command)
 
-app.command(name="hide", help="[red] Hide the current application.")(hide_command)
+app.command(name="hide", help="[red] Hide the current application.")(
+    mac_apps.hide_command
+)
 
 app.command(name="unhide", help="[red] Unhide a previously hidden application.")(
-    unhide_command
+    mac_apps.unhide_command
 )
 
 # system setting commands
-app.command(name="sound", help="[yellow]Adjust the system volume.")(change_sound)
-
-app.command(name="mute", help="[yellow]Mute system audio.")(mute_sound)
-
-app.command(name="unmute", help="[yellow]Unmute system audio.")(unmute_sound)
-
-app.command(name="clear", help="[yellow]Clear the current menu or terminal state.")(
-    clear_menu
+app.command(name="sound", help="[yellow]Adjust the system volume.")(
+    mac_settings.change_sound
 )
 
-app.command(name="sleep", help="[yellow]Put the ststem to sleep.")(sleep_mode)
+app.command(name="mute", help="[yellow]Mute system audio.")(mac_settings.mute_sound)
 
-app.command(name="lock", help="[yellow]Lock the system screen.")(lock_mode)
+app.command(name="unmute", help="[yellow]Unmute system audio.")(
+    mac_settings.unmute_sound
+)
+
+app.command(name="clear", help="[yellow]Clear the current menu or terminal state.")(
+    mac_settings.clear_menu
+)
+
+app.command(name="sleep", help="[yellow]Put the ststem to sleep.")(
+    mac_settings.sleep_mode
+)
+
+app.command(name="lock", help="[yellow]Lock the system screen.")(mac_settings.lock_mode)
 
 # browser commands
 app.command(name="search", help="[bold blue]Search a query in the browser.")(
-    search_command
+    mac_browser.search_command
 )
 
 app.command(name="play", help="[bold blue]Play a song in browser-based music.")(
-    play_song
+    mac_browser.play_song
 )
 
 
