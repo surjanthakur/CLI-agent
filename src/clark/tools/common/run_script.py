@@ -5,7 +5,7 @@ from rich import print
 from ...core.logging import my_logger
 
 
-# run osascript in subprocess
+# run osascript process
 def run_process(script: str, timeout: int = 15) -> str | None:
     """Run an AppleScript string and return its stdout.
 
@@ -36,7 +36,7 @@ def run_process(script: str, timeout: int = 15) -> str | None:
         return None
 
     except subprocess.TimeoutExpired:
-        my_logger.error(f"AppleScript timed out after {timeout} seconds.")
+        my_logger.error(f"AppleScript timedout after {timeout} seconds.")
         return None
 
     except RuntimeError:
